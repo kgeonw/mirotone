@@ -1,0 +1,66 @@
+/* TEXTAREA */
+
+.textarea {
+  width: 100%;
+  font-family: var(--body-font);
+  padding: 13px 16px 13px;
+  resize: none;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: var(--border-radius-medium);
+  font-size: var(--font-size-large);
+  color: var(--indigo700);
+  background-color: var(--white);
+  border-color: var(--indigo400);
+  outline: none;
+}
+
+.textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: var(--indigo500);
+}
+
+.textarea:-moz-placeholder {
+  /* Firefox 19+ */
+  color: var(--indigo500);
+  opacity: 1;
+}
+
+.textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  color: var(--indigo500);
+}
+
+.textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: var(--indigo500);
+  opacity: 1;
+}
+
+/* State */
+
+.textarea:hover {
+  border-color: var(--indigo500);
+}
+
+.textarea:focus {
+  border-color: var(--blue600);
+}
+
+.textarea[disabled] {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: var(--border-radius-medium);
+  padding: 11px 16px 13px;
+  font-size: var(--font-size-large);
+  color: var(--indigo700);
+  background-color: var(--white);
+  border-color: var(--indigo400);
+  outline: none;
+  opacity: 0.4;
+  cursor: not-allowed;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "mirotone",
+  "version": "0.1.0",
+  "description": "Miro UI Kit for building apps & plugins",
+  "style": "dist/styles.css",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "format": "prettier -w ./src/css"
+  },
+  "keywords": [
+    "design-system",
+    "system",
+    "miro",
+    "plugins",
+    "apps"
+  ],
+  "author": "Boris Kirov",
+  "license": "MIT",
+  "devDependencies": {
+    "@mirohq/prettier-config": "^1.0.0",
+    "browser-sync": "^2.26.13",
+    "clipboard": "^2.0.6",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-css-svg": "^1.3.1",
+    "gulp-postcss": "^9.0.0",
+    "postcss": "^8.1.10",
+    "postcss-cli": "^8.3.0",
+    "postcss-import": "^13.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.2.0"
+  }
+}

@@ -1,0 +1,6 @@
+src
+example
+*.config.js
+*.json
+*rc
+gulpfile.js

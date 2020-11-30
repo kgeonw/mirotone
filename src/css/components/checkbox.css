@@ -1,0 +1,75 @@
+/* CHECKBOX */
+.checkbox {
+  position: relative;
+  display: flex;
+  vertical-align: top;
+  cursor: pointer;
+  font-size: var(--font-size-medium);
+  min-height: 20px;
+}
+
+.checkbox:nth-child(n) {
+  margin: 0px 0px 16px 0px;
+}
+
+.checkbox span {
+  margin-left: 28px;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkbox span:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  height: 16px;
+  width: 16px;
+  border: 1px solid var(--indigo400);
+  background-color: var(--white);
+  border-radius: var(--border-radius-medium);
+  box-sizing: border-box;
+  transition: background-color 250ms, border 250ms;
+  transform: translateY(2px);
+}
+
+.checkbox:hover span:before {
+  border-color: var(--blue700);
+}
+
+.checkbox input:checked + span:before {
+  border-color: var(--blue700);
+  background-color: var(--blue700);
+}
+
+.checkbox:hover input:checked + span:before {
+  background-color: var(--blue800);
+}
+
+.checkbox span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'><path fill='%23fff' d='M8.278 11.222l-.062.062a1 1 0 0 0 .009 1.423L11 15.414l5-5A1 1 0 0 0 14.586 9L11 12.586l-1.293-1.349a1 1 0 0 0-1.43-.015z'></path></svg>");
+  background-position: -4px -4px;
+  transform: scale(0);
+  transform-origin: 50%;
+  transition: transform 250ms 200ms;
+  top: 2px;
+}
+
+.checkbox input:checked + span:after {
+  transform: scale(1);
+}
+
+.checkbox.miro-checkbox--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

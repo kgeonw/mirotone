@@ -1,0 +1,96 @@
+/* TABS */
+.tabs {
+  background: var(--indigo200);
+  border-radius: var(--border-radius-medium);
+  padding: 2px;
+  margin: 16px 0px;
+}
+
+.tabs .tabs-header-list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tabs .tab {
+  display: inline-block;
+  font-size: var(--font-size-small);
+  text-align: center;
+  color: var(--indigo600);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  white-space: nowrap;
+  border-radius: var(--border-radius-medium);
+  width: 100%;
+  margin: 0 0 0 3px;
+  position: relative;
+}
+
+.tabs .tab:before {
+  position: absolute;
+  transition: 0.3s ease-in-out opacity;
+  content: '';
+  width: 1px;
+  height: 16px;
+  background: var(--indigo400);
+  right: calc(100% + 1px);
+  top: calc(50% - 8px);
+}
+
+.tabs .tab:first-child {
+  margin: 0;
+}
+
+.tabs .tab:first-child:before {
+  opacity: 0;
+}
+
+.tabs .tab:hover,
+.tab:active,
+.tabs .tab.tab-active {
+  color: var(--indigo700);
+  background: var(--white);
+}
+
+.tabs .tab:hover:before,
+.tabs .tab.tab-active:before {
+  opacity: 0;
+}
+
+.tabs .tab:hover + .tab:before,
+.tabs .tab.tab-active + .tab:before {
+  opacity: 0;
+}
+
+.tabs .tab-text {
+  display: inline-block;
+  padding: 5px 0;
+}
+
+.tabs .tab-badge:after {
+  content: attr(data-badge);
+  display: inline-block;
+  margin-left: 10px;
+  color: var(--indigo600);
+}
+
+.tabs .tabs-header-selector {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 0;
+  z-index: 1;
+  display: inline-block;
+  height: 2px;
+  background-color: var(--blue700);
+}
+
+.tabs .tabs-header-selector-animated {
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
