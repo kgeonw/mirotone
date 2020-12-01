@@ -1,6 +1,6 @@
 {
   "name": "mirotone",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Miro UI Kit for building apps & plugins",
   "style": "dist/styles.css",
   "scripts": {
