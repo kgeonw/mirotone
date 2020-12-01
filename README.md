@@ -15,6 +15,8 @@ Mirotone is a small & leightweight skeleton UI Kit that tries to match Miro styl
 - input
 - select
 - tabs
+
+You can check all the example in the [documentation](https://mirotone.netlify.app/).
 ​
 ## Installation
 ​
@@ -29,7 +31,7 @@ yarn add mirotone
 Using something like [PostCSS import](https://github.com/postcss/postcss-import) you can do the following
 ​
 ```css
-@import 'mirotone';
+@import 'mirotone/dist/styles.css';
 ```
 ​
 ### Development
