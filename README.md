@@ -16,7 +16,7 @@ Mirotone is a small & leightweight skeleton UI Kit that tries to match Miro styl
 - select
 - tabs
 
-You can check all the example in the [documentation](https://mirotone.netlify.app/).
+You can check the [documentation](https://mirotone.netlify.app/) for more details.
 ​
 ## Installation
 ​
