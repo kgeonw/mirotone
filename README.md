@@ -23,7 +23,7 @@ Using something like [PostCSS import](https://github.com/postcss/postcss-import)
 ```
 
 Use standart css linking to use the styles right away in your project
-```
+```HTML
 <link rel="stylesheet" href="https://unpkg.com/mirotone/dist/styles.css" />
 ```
 
