@@ -1,7 +1,32 @@
 # Mirotone
+
+## Intro​
+
+Mirotone is a small & lightweight skeleton UI Kit that tries to match Miro styles for building apps and plugins. The package contains a HTML & CSS files which can be used for any project.
 ​
-Mirotone is a small & leightweight skeleton UI Kit that tries to match Miro styles for building apps and plugins. The package contains a CSS file which can be used for any project.
+## Getting started
+
+Install the package as a dependancy on your own project by running
 ​
+```
+npm install mirotone
+​
+// or with yarn
+​
+yarn add mirotone
+```
+​
+Using something like [PostCSS import](https://github.com/postcss/postcss-import) you can do the following
+​
+```css
+@import 'mirotone/dist/styles.css';
+```
+
+Use standart css linking to use the styles right away in your project
+```
+<link rel="stylesheet" href="https://unpkg.com/mirotone/dist/styles.css" />
+```
+
 ## Components
 ​
 - typography
@@ -18,28 +43,12 @@ Mirotone is a small & leightweight skeleton UI Kit that tries to match Miro styl
 
 You can check the [documentation](https://mirotone.netlify.app/) for more details.
 ​
-## Installation
-​
-```
-npm install mirotone
-​
-// or with yarn
-​
-yarn add mirotone
-```
-​
-Using something like [PostCSS import](https://github.com/postcss/postcss-import) you can do the following
-​
-```css
-@import 'mirotone/dist/styles.css';
-```
-​
-### Development
+### Development and contributions
 ​
 Clone the repo by running:
 ​
 ```
-git clone https://github.com/sboriskirov/miro-palette-plugins.git
+git clone https://github.com/boriskirov/miro-palette-plugins.git
 ```
 ​
 Install the dependencies
@@ -62,5 +71,10 @@ npm run watch
 ​
 ### Roadmap
 ​
-- Improve the documemntation
+- Improve the documemntation 
 - Add Templates & layout
+
+​
+### Report an issue
+
+If you want to report an issue please fill out the issue [form](https://github.com/boriskirov/mirotone/issues/new).

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css" />
+    <link rel='icon' href='mirotone.svg' type='image/x-icon'/ >
     <link rel="stylesheet" href="https://unpkg.com/mirotone/dist/styles.css" />
     <style>
       html {
@@ -87,589 +88,640 @@
       }
 
       code {
-        font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+        font-family: 'Consolas', 'Monaco','Andale Mono','Ubuntu Mono',monospace;
         background-color: var(--indigo50);
         font-size: var(--font-size-medium);
         padding: 8px;
         border-radius: var(--border-radius-small);
         color: var(--blue900);
       }
+
+      code[class*="language-"], pre[class*="language-"] {
+        font-family: 'SFMono-Regular', Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        font-size: var(--font-size-medium);
+      }
+
+      .token.atrule, .token.attr-value, .token.keyword {
+        color: var(--blue900);
+      }
+
     </style>
   </head>
   <body>
     <div class="wrapper">
       <grid style="display: grid; grid-template-columns: repeat(1, 1fr)">
         <div>
-          <h1 class="h1" style="font-size: 5vw; font-weight: var(--font-weight-black)">Mirotone</h1>
+          <div class="heading" style="display: flex;">
+            <h1 class="h1" style="font-size: 5vw; font-weight: var(--font-weight-black); line-height: 1.4;">Mirotone</h1>
+          </div>
           <p class="p-large">
-            Mirotone is a small & leightweight skeleton UI Kit that tries to match Miro styles for building apps and
-            plugins. The package contains a CSS file which can be used for any project.
+            Mirotone is a small & lightweight skeleton UI Kit that tries to match Miro styles for building apps and plugins.
+            The package contains a HTML & CSS files which can be used for any project.
           </p>
+          <section>
+            <h2 class="h2">Getting started</h2>
+            <p class="p-large">
+              Install the package as a dependancy on your own project by running 
+            </p>
+            <div class="code-wrapper">
+              <!-- Target -->
+              <pre
+                id="npm-install"
+                class="textarea language-html"
+              ><code>npm install mirotone // yarn add mirotone</code></pre>
+              <!-- Trigger -->
+              <button
+                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                data-clipboard-target="#npm-install"
+              >
+                <span class="tooltiptext">Copy to clipboard</span>
+              </button>
+            </div>
+            <p class="p-large">
+              Link the css directly by standart css linking, recommended to be used if you don't want to consume the package and icons pack
+            </p>
+            <div class="code-wrapper">
+              <!-- Target -->
+              <pre
+                id="css-link"
+                class="textarea language-html"
+              ><code>&lt;link rel="stylesheet" href="https://unpkg.com/mirotone/dist/styles.css"&gt;</code></pre>
+              <!-- Trigger -->
+              <button
+                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                data-clipboard-target="#css-link"
+              >
+                <span class="tooltiptext">Copy to clipboard</span>
+              </button>
+            </div>
+          </section>
           <section>
             <h2 class="h2">How does it work</h2>
             <p>Mirotone uses the BEM naming conventation. You define the type of CSS and add a modifier to it.</p>
             <p>
               Example:
               <code>
-                <span><</span>button class="button button-primary"<span>></span> Primary button
-                <span><<span>/</span></span
-                >button<span>></span>
+                <span><</span>button class="button button-primary"<span>></span>Primary button<span><<span>/</span></span>button<span>></span>
               </code>
             </p>
             <button class="button button-primary">Primary button</button>
             <hr />
           </section>
-          <section>
-            <h2 class="h2">Content</h2>
-            <ul>
-              <li><a class="link link-primary" href="#typography-anchor">Typography</a></li>
-              <li><a class="link link-primary" href="#icons-anchor">Icons</a></li>
-              <li><a class="link link-primary" href="#buttons-anchor">Buttons</a></li>
-              <li><a class="link link-primary" href="#checkbox-anchor">Checkbox</a></li>
-              <li><a class="link link-primary" href="#toggle-anchor">Toggle</a></li>
-              <li><a class="link link-primary" href="#radiobutton-anchor">Radio button</a></li>
-              <li><a class="link link-primary" href="#link-anchor">Link</a></li>
-              <li><a class="link link-primary" href="#textarea-anchor">Textarea</a></li>
-              <li><a class="link link-primary" href="#input-anchor">Input</a></li>
-              <li><a class="link link-primary" href="#select-anchor">Select</a></li>
-              <li><a class="link link-primary" href="#tabs-anchor">Tabs</a></li>
-            </ul>
-            <hr />
-          </section>
         </div>
-        <div>
-          <!-- Typography -->
-          <section id="typography-anchor">
-            <!-- Headings -->
-            <h2 class="h2">Headings</h2>
-            <p class="p-large">
-              Use <code>.h1</code> – <code>.h4</code> class to change an elements, it is also normalizing each text
-              element. font size and weight to match Miro heading styles.
-            </p>
-            <hr />
-            <h1 class="h1">Heading 1</h1>
-            <h2 class="h2">Heading 2</h2>
-            <h3 class="h3">Heading 3</h3>
-            <h4 class="h4">Heading 4</h4>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre
-                id="typography"
-                class="textarea language-html language-html"
-              ><code>&lt;h1 class="h1"&gt;Heading 1&lt;/h1&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#typography"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-          </section>
-          <section>
-            <!-- Paragraphs -->
-            <h2 class="h2">Paragraphs</h2>
-            <p class="p-large">
-              Use <code>.p-large</code>,<code>.p-medium</code> or <code>.p-small</code> to change an elements font size
-              and weight to match Miro paragraph styles.
-            </p>
-            <hr />
-            <p class="p-large">Paragraph large</p>
-            <p class="p-medium">Paragraph medium</p>
-            <p class="p-small">Paragraph small</p>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre
-                id="paragraph"
-                class="textarea language-html"
-              ><code>&lt;p class="p-large"&gt;Paragraph large&lt;/p&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#paragraph"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-          </section>
-          <!--Icons-->
-          <section id="icons-anchor">
-            <h2 class="h2">Icons</h2>
-            <p class="p-large">
-              You can use the Miro icons by adding class <code>.icon</code> + <code>.icon-eye</code>, eye in this case
-              is the icon name. You can find all icons in the <code>dist/icons</code> folder.
-            </p>
-            <div class="row" style="display: flex; flex-direction: row">
-              <div class="icon icon-eye"></div>
-            </div>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre
-                id="icon"
-                class="textarea language-html"
-              ><code>&lt;div class="icon icon-eye"&gt;&lt;/div&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#icon"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-          </section>
-          <!--Buttons-->
-          <section id="buttons-anchor">
-            <h2 class="h2">Buttons</h2>
-            <p class="p-large">
-              When using buttons please add <code></code> for accessibility. You can find two sizes of buttons:
-              <code>.button</code> and <code>.button-small</code>
-            </p>
-            <hr />
-            <div class="row">
-              <!-- Primary button -->
-              <h3 class="h3">Primary button</h3>
-              <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
-              <p class="p-large">Use the <code>.button-primary</code> to add modificator for color.</p>
-              <button class="button button-primary">Primary button</button>
-              <button class="button button-primary button-small">Primary small</button>
+        <main>
+          <div class="content">
+            <section>
+              <h2 class="h2">Content</h2>
+              <ul>
+                <li><a class="link link-primary" href="#typography-anchor">Typography</a></li>
+                <li><a class="link link-primary" href="#icons-anchor">Icons</a></li>
+                <li><a class="link link-primary" href="#buttons-anchor">Buttons</a></li>
+                <li><a class="link link-primary" href="#checkbox-anchor">Checkbox</a></li>
+                <li><a class="link link-primary" href="#toggle-anchor">Toggle</a></li>
+                <li><a class="link link-primary" href="#radiobutton-anchor">Radio button</a></li>
+                <li><a class="link link-primary" href="#link-anchor">Link</a></li>
+                <li><a class="link link-primary" href="#textarea-anchor">Textarea</a></li>
+                <li><a class="link link-primary" href="#input-anchor">Input</a></li>
+                <li><a class="link link-primary" href="#select-anchor">Select</a></li>
+                <li><a class="link link-primary" href="#tabs-anchor">Tabs</a></li>
+              </ul>
+              <hr />
+            </section>
+          </div>
+          <div class="components">
+            <!-- Typography -->
+            <section id="typography-anchor">
+              <!-- Headings -->
+              <h2 class="h2">Headings</h2>
+              <p class="p-large">
+                Use <code>.h1</code> – <code>.h4</code> class to change an elements, it is also normalizing each text
+                element. font size and weight to match Miro heading styles.
+              </p>
+              <hr />
+              <h1 class="h1">Heading 1</h1>
+              <h2 class="h2">Heading 2</h2>
+              <h3 class="h3">Heading 3</h3>
+              <h4 class="h4">Heading 4</h4>
               <div class="code-wrapper">
                 <!-- Target -->
                 <pre
-                  id="button-primary"
-                  class="textarea language-html"
-                ><code>&lt;button class="button button-primary"&gt;Primary button&lt;/button&gt;
- &lt;button class="button button-primary button-small"&gt;Primary small&lt;/button&gt;</code></pre>
+                  id="typography"
+                  class="textarea language-html language-html"
+                ><code>&lt;h1 class="h1"&gt;Heading 1&lt;/h1&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                  data-clipboard-target="#button-primary"
+                  data-clipboard-target="#typography"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+            </section>
+            <section>
+              <!-- Paragraphs -->
+              <h2 class="h2">Paragraphs</h2>
+              <p class="p-large">
+                Use <code>.p-large</code>,<code>.p-medium</code> or <code>.p-small</code> to change an elements font size
+                and weight to match Miro paragraph styles.
+              </p>
+              <hr />
+              <p class="p-large">Paragraph large</p>
+              <p class="p-medium">Paragraph medium</p>
+              <p class="p-small">Paragraph small</p>
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre
+                  id="paragraph"
+                  class="textarea language-html"
+                ><code>&lt;p class="p-large"&gt;Paragraph large&lt;/p&gt;</code></pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#paragraph"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+            </section>
+            <!--Icons-->
+            <section id="icons-anchor">
+              <h2 class="h2">Icons</h2>
+              <p class="p-large">
+                You can use the Miro icons by adding class <code>.icon</code> + <code>.icon-eye</code>, eye in this case
+                is the icon name. You can find all icons in the <code>dist/icons</code> folder.
+              </p>
+              <div class="row" style="display: flex; flex-direction: row">
+                <div class="icon icon-eye"></div>
+              </div>
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre
+                  id="icon"
+                  class="textarea language-html"
+                ><code>&lt;div class="icon icon-eye"&gt;&lt;/div&gt;</code></pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#icon"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+            </section>
+            <!--Buttons-->
+            <section id="buttons-anchor">
+              <h2 class="h2">Buttons</h2>
+              <p class="p-large">
+                When using buttons please add <code></code> for accessibility. You can find two sizes of buttons:
+                <code>.button</code> and <code>.button-small</code>
+              </p>
+              <hr />
+              <div class="row">
+                <!-- Primary button -->
+                <h3 class="h3">Primary button</h3>
+                <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
+                <p class="p-large">Use the <code>.button-primary</code> to add modificator for color.</p>
+                <button class="button button-primary">Primary button</button>
+                <button class="button button-primary button-small">Primary small</button>
+                <div class="code-wrapper">
+                  <!-- Target -->
+                  <pre
+                    id="button-primary"
+                    class="textarea language-html"
+                  ><code>&lt;button class="button button-primary"&gt;Primary button&lt;/button&gt;
+  &lt;button class="button button-primary button-small"&gt;Primary small&lt;/button&gt;</code></pre>
+                  <!-- Trigger -->
+                  <button
+                    class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                    data-clipboard-target="#button-primary"
+                  >
+                    <span class="tooltiptext">Copy to clipboard</span>
+                  </button>
+                </div>
+                <hr />
+                <!-- Secondary button -->
+                <h3 class="h3">Secondary button</h3>
+                <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
+                <p class="p-large">Use the <code>.button-secondary</code> to add modificator for color.</p>
+                <button class="button button-secondary">Secondary button</button>
+                <button class="button button-secondary button-small">Secondary small</button>
+                <div class="code-wrapper">
+                  <!-- Target -->
+                  <pre
+                    id="button-secondary"
+                    class="textarea language-html"
+                  ><code>&lt;button class="button button-secondary"&gt;Secondary button&lt;/button&gt;
+  &lt;button class="button button-secondary button-small"&gt;Secondary small&lt;/button&gt;</code></pre>
+                  <!-- Trigger -->
+                  <button
+                    class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                    data-clipboard-target="#button-secondary"
+                  >
+                    <span class="tooltiptext">Copy to clipboard</span>
+                  </button>
+                </div>
+              </div>
+              <hr />
+
+              <!-- Danger button -->
+              <h3 class="h3">Danger button</h3>
+              <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
+              <p class="p-large">Use the <code>.button-danger</code> to add modificator for color.</p>
+              <button class="button button-danger">Danger button</button>
+              <button class="button button-danger button-small">Danger small</button>
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre
+                  id="button-danger"
+                  class="textarea language-html"
+                ><code>&lt;button class="button button-danger"&gt;Danger button&lt;/button&gt;
+  &lt;button class="button button-danger button-small"&gt;Danger small&lt;/button&gt;</code></pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#button-danger"
                 >
                   <span class="tooltiptext">Copy to clipboard</span>
                 </button>
               </div>
               <hr />
-              <!-- Secondary button -->
-              <h3 class="h3">Secondary button</h3>
+
+              <!-- Secondary border button -->
+              <h3 class="h3">Secondary border button</h3>
               <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
-              <p class="p-large">Use the <code>.button-secondary</code> to add modificator for color.</p>
-              <button class="button button-secondary">Secondary button</button>
-              <button class="button button-secondary button-small">Secondary small</button>
+              <p class="p-large">Use the <code>.button-secondary-border</code> to add modificator for color.</p>
+              <button class="button button-secondary-border">Secondary border button</button>
+              <button class="button button-secondary-border button-small">Secondary border small</button>
               <div class="code-wrapper">
                 <!-- Target -->
                 <pre
-                  id="button-secondary"
+                  id="button-secondary-border"
                   class="textarea language-html"
-                ><code>&lt;button class="button button-secondary"&gt;Secondary button&lt;/button&gt;
- &lt;button class="button button-secondary button-small"&gt;Secondary small&lt;/button&gt;</code></pre>
+                ><code>&lt;button class="button button-secondary-border"&gt;Secondary Border button&lt;/button&gt;
+  &lt;button class="button button-secondary-border button-small"&gt;Secondary Border small&lt;/button&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                  data-clipboard-target="#button-secondary"
+                  data-clipboard-target="#button-secondary-border"
                 >
                   <span class="tooltiptext">Copy to clipboard</span>
                 </button>
               </div>
-            </div>
-            <hr />
+              <hr />
 
-            <!-- Danger button -->
-            <h3 class="h3">Danger button</h3>
-            <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
-            <p class="p-large">Use the <code>.button-danger</code> to add modificator for color.</p>
-            <button class="button button-danger">Danger button</button>
-            <button class="button button-danger button-small">Danger small</button>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre
-                id="button-danger"
-                class="textarea language-html"
-              ><code>&lt;button class="button button-danger"&gt;Danger button&lt;/button&gt;
- &lt;button class="button button-danger button-small"&gt;Danger small&lt;/button&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#button-danger"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-            <hr />
+              <!-- Danger border button -->
+              <h3 class="h3">Danger border button</h3>
+              <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
+              <p class="p-large">Use the <code>.button-danger-border</code> to add modificator for color.</p>
+              <button class="button button-danger-border">Danger border button</button>
+              <button class="button button-danger-border button-small">Danger border small</button>
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre
+                  id="button-danger-border"
+                  class="textarea language-html"
+                ><code>&lt;button class="button button-danger-border"&gt;Danger Border button&lt;/button&gt;
+  &lt;button class="button button-danger-border button-small"&gt;Danger Border small&lt;/button&gt;</code></pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#button-danger-border"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+              <hr />
 
-            <!-- Secondary border button -->
-            <h3 class="h3">Secondary border button</h3>
-            <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
-            <p class="p-large">Use the <code>.button-secondary-border</code> to add modificator for color.</p>
-            <button class="button button-secondary-border">Secondary border button</button>
-            <button class="button button-secondary-border button-small">Secondary border small</button>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre
-                id="button-secondary-border"
-                class="textarea language-html"
-              ><code>&lt;button class="button button-secondary-border"&gt;Secondary Border button&lt;/button&gt;
- &lt;button class="button button-secondary-border button-small"&gt;Secondary Border small&lt;/button&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#button-secondary-border"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-            <hr />
-
-            <!-- Danger border button -->
-            <h3 class="h3">Danger border button</h3>
-            <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
-            <p class="p-large">Use the <code>.button-danger-border</code> to add modificator for color.</p>
-            <button class="button button-danger-border">Danger border button</button>
-            <button class="button button-danger-border button-small">Danger border small</button>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre
-                id="button-danger-border"
-                class="textarea language-html"
-              ><code>&lt;button class="button button-danger-border"&gt;Danger Border button&lt;/button&gt;
- &lt;button class="button button-danger-border button-small"&gt;Danger Border small&lt;/button&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#button-danger-border"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-            <hr />
-
-            <!-- Disabled button -->
-            <h3 class="h3">Disabled button</h3>
-            <p class="p-large">Use the <code>disabled=""</code> attribute for disabling buttons.</p>
-            <button class="button button-primary" disabled>Disabled button</button>
-            <button class="button button-primary button-small" disabled>Disabled small</button>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre
-                id="button-primary"
-                class="textarea language-html"
-              ><code>&lt;button class="button button-primary" disabled&gt;Primary button&lt;/button&gt;
- &lt;button class="button button-primary button-small" disabled&gt;Primary small&lt;/button&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#button-primary-dis"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-            <hr />
-            <!-- Icon button -->
-            <h3 class="h3">Icon button</h3>
-            <p class="p-large">
-              Use the <code>.button-icon</code> class + <code>.icon-{name}</code> to render an icon button.
-            </p>
-            <p>Add the <code>.button-icon-small</code> if you want to add a smalller icon button.</p>
-            <button class="button-icon button-icon-small icon-eye"></button>
-            <button class="button-icon icon-eye"></button>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre
-                id="button-icon"
-                class="textarea language-html"
-              ><code>&lt;button class="button-icon icon-eye"&gt;&lt;/button&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#button-icon"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-            <hr />
-          </section>
-          <!--Checkbox-->
-          <section id="checkbox-anchor">
-            <h2 class="h2">Checkbox</h2>
-            <p class="p-large">Use the  <code>.checkbox</code> class.</p>
-            <hr />
-            <label class="checkbox">
-              <input type="checkbox" checked="" />
-              <span>Checkbox</span>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <span>Checkbox</span>
-            </label>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre
-                id="checkbox"
-                class="textarea language-html"
-              ><code>&lt;label class="checkbox"&gt; &lt;input type="checkbox" checked=""&gt; &lt;span&gt;Checkbox&lt;/span&gt; &lt;/label&gt;
- &lt;label class="checkbox"&gt; &lt;input type="checkbox"&gt; &lt;span&gt;Checkbox&lt;/span&gt; &lt;/label&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#checkbox"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-          </section>
-          <!--Toggle-->
-          <section id="toggle-anchor">
-            <h2 class="h2">Toggle</h2>
-            <p class="p-large">Use the  <code>.toggle</code> class.</p>
-            <hr />
-            <label class="toggle">
-              <input type="checkbox" checked="" />
-              <span>First toggle</span>
-            </label>
-            <label class="toggle">
-              <input type="checkbox" />
-              <span>Second toggle</span>
-            </label>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre id="toggle" class="textarea language-html"><code>&lt;label class="toggle"&gt;
-     &lt;input type="checkbox" checked=""&gt;
-     &lt;span&gt;First toggle&lt;/span&gt;
- &lt;/label&gt;
- &lt;label class="toggle"&gt;
-     &lt;input type="checkbox"&gt;
-     &lt;span&gt;Second toggle&lt;/span&gt;
- &lt;/label&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#toggle"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-          </section>
-          <!--Radio Button-->
-          <section id="radiobutton-anchor">
-            <h2 class="h2">Radio button</h2>
-            <p class="p-large">Use the  <code>.radiobutton</code> class.</p>
-            <hr />
-            <label class="radiobutton">
-              <input type="radio" value="0" name="radio" checked="" />
-              <span>First</span>
-            </label>
-            <label class="radiobutton">
-              <input type="radio" value="1" name="radio" />
-              <span>Second</span>
-            </label>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre id="radiobutton" class="textarea language-html"><code>&lt;label class="radiobutton"&gt;
-      &lt;input type="radio" value="0" name="radio" checked=""&gt;
-      &lt;span&gt;First&lt;/span&gt;
+              <!-- Disabled button -->
+              <h3 class="h3">Disabled button</h3>
+              <p class="p-large">Use the <code>disabled=""</code> attribute for disabling buttons.</p>
+              <button class="button button-primary" disabled>Disabled button</button>
+              <button class="button button-primary button-small" disabled>Disabled small</button>
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre
+                  id="button-primary"
+                  class="textarea language-html"
+                ><code>&lt;button class="button button-primary" disabled&gt;Primary button&lt;/button&gt;
+  &lt;button class="button button-primary button-small" disabled&gt;Primary small&lt;/button&gt;</code></pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#button-primary-dis"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+              <hr />
+              <!-- Icon button -->
+              <h3 class="h3">Icon button</h3>
+              <p class="p-large">
+                Use the <code>.button-icon</code> class + <code>.icon-{name}</code> to render an icon button.
+              </p>
+              <p>Add the <code>.button-icon-small</code> if you want to add a smalller icon button.</p>
+              <button class="button-icon button-icon-small icon-eye"></button>
+              <button class="button-icon icon-eye"></button>
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre
+                  id="button-icon"
+                  class="textarea language-html"
+                ><code>&lt;button class="button-icon icon-eye"&gt;&lt;/button&gt;</code></pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#button-icon"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+              <hr />
+            </section>
+            <!--Checkbox-->
+            <section id="checkbox-anchor">
+              <h2 class="h2">Checkbox</h2>
+              <p class="p-large">Use the  <code>.checkbox</code> class.</p>
+              <hr />
+              <label class="checkbox">
+                <input type="checkbox" checked="" />
+                <span>Checkbox</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <span>Checkbox</span>
+              </label>
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre
+                  id="checkbox"
+                  class="textarea language-html"
+                ><code>&lt;label class="checkbox"&gt; &lt;input type="checkbox" checked=""&gt; &lt;span&gt;Checkbox&lt;/span&gt; &lt;/label&gt;
+  &lt;label class="checkbox"&gt; &lt;input type="checkbox"&gt; &lt;span&gt;Checkbox&lt;/span&gt; &lt;/label&gt;</code></pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#checkbox"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+            </section>
+            <!--Toggle-->
+            <section id="toggle-anchor">
+              <h2 class="h2">Toggle</h2>
+              <p class="p-large">Use the  <code>.toggle</code> class.</p>
+              <hr />
+              <label class="toggle">
+                <input type="checkbox" checked="" />
+                <span>First toggle</span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" />
+                <span>Second toggle</span>
+              </label>
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre id="toggle" class="textarea language-html"><code>&lt;label class="toggle"&gt;
+      &lt;input type="checkbox" checked=""&gt;
+      &lt;span&gt;First toggle&lt;/span&gt;
   &lt;/label&gt;
-  &lt;label class="radiobutton"&gt;
-      &lt;input type="radio" value="1" name="radio"&gt;
-      &lt;span&gt;Second&lt;/span&gt;
+  &lt;label class="toggle"&gt;
+      &lt;input type="checkbox"&gt;
+      &lt;span&gt;Second toggle&lt;/span&gt;
   &lt;/label&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#radiobutton"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-          </section>
-          <!--Link-->
-          <section id="link-anchor">
-            <h2 class="h2">Link</h2>
-            <p class="p-large">
-              Use the  <code>.link</code> class to stlye the <code><span><</span>a<span>></span></code
-              >tag
-            </p>
-            <p class="p-large">Use the <code>.link-primary</code> to add modificator for color.</p>
-            <hr />
-            <a class="link link-primary" href="">Primary</a>
-            <a class="link link-danger" href="">Danger</a>
-            <a class="link link-text" href="">Text</a>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre id="link" class="textarea language-html"><code>&lt;a class="link link-primary" href=""&gt;Primary&lt;/a&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#link"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-          </section>
-          <!--Textarea-->
-          <section id="textarea-anchor">
-            <h2 class="h2">Textarea</h2>
-            <p class="p-large">Use a <code>.form-group</code>to group the textarea with label and status if needed.</p>
-            <hr />
-            <div class="form-group">
-              <label>Label</label>
-              <textarea
-                class="textarea language-html"
-                placeholder="Placeholder text"
-                spellcheck="true"
-                rows="4"
-              ></textarea>
-            </div>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre id="textarea-input" class="textarea language-html"><code>&lt;div class="form-group"&gt;
-  &lt;label&gt;Textarea&lt;/label&gt;
-  &lt;textarea
-    class="textarea language-html"
-    placeholder="Placeholder text"
-    spellcheck="true"
-    rows="4"
-  &gt;&lt;/textarea&gt;
- &lt;/div&gt;
-    </code>
-              </pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#textarea-input"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-          </section>
-          <!--Input-->
-          <section id="input-anchor">
-            <h2 class="h2">Input</h2>
-            <p class="p-large">Use a <code>.form-group</code>to group the input with label and status if needed.</p>
-            <p class="p-large">You can find two sizes of inputs: <code>.input</code> and <code>.input-small</code></p>
-            For <code>.input-small</code> combine it with a <code>.form-group-small</code> as wrapping style.
-            <hr />
-            <div class="form-group">
-              <label>Input</label>
-              <input class="input" type="text" placeholder="Enter something" />
-            </div>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre id="input" class="textarea language-html"><code>&lt;div class="form-group"&gt;
-  &lt;label&gt;Input&lt;/label&gt;
-  &lt;input class="input" type="text" placeholder="Enter something"/&gt;
- &lt;/div&gt;</code>
-                      </pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#input"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-            <div class="form-group form-group-small">
-              <label>Small input</label>
-              <input class="input input-small" type="text" placeholder="Enter something" />
-            </div>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre id="input-small" class="textarea language-html"><code>&lt;div class="form-group-small"&gt;
-  &lt;label&gt;Input&lt;/label&gt;
-  &lt;input class="input input-small" type="text" placeholder="Enter something"/&gt;
- &lt;/div&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#input-small"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-            <div class="form-group form-group-small success">
-              <label>Small valid input</label>
-              <input class="input input-small" type="text" placeholder="Enter something" value="Valid value" />
-              <div class="status-text">Saved</div>
-            </div>
-            <div class="form-group form-group-small error">
-              <label>Small invalid input</label>
-              <input class="input input-small" type="text" placeholder="Enter something" value="Invalid value" />
-              <div class="status-text">Not saved</div>
-            </div>
-          </section>
-          <!--Select-->
-          <section id="select-anchor">
-            <h2 class="h2">Select</h2>
-            <p class="p-large">Use a <code>.select</code>class to style your <code>select</code> HTML Element.</p>
-            <hr />
-            <select class="select">
-              <option value="1">Option one</option>
-              <option value="3">Option two</option>
-              <option value="4">Option three</option>
-              <option value="5">Option four</option>
-            </select>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre id="select" class="textarea language-html"><code>&lt;select class="select"&gt;
-  &lt;option value="1"&gt;Option one&lt;/option&gt;
-  &lt;option value="3"&gt;Option two&lt;/option&gt;
-  &lt;option value="4"&gt;Option three&lt;/option&gt;
-  &lt;option value="5"&gt;Option four&lt;/option&gt;
- &lt;/select&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#select"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-          </section>
-          <!--Tabs-->
-          <section id="tabs-anchor">
-            <h2 class="h2">Tabs</h2>
-            <p class="p-large">
-              Use a <code>.tabs</code>class to style your wrapper. Use <code>.tab</code> to style each pill.
-            </p>
-            <p class="p-large">
-              You can add <code>data-badge</code> attribute if you want to present a numerical values inside each tab.
-            </p>
-            <hr />
-            <div class="tabs">
-              <div class="tabs-header-list">
-                <div class="tab tab-active">
-                  <div class="tab-text tab-badge" data-badge="1,000">Tab</div>
-                </div>
-                <div class="tab">
-                  <div class="tab-text tab-badge" data-badge="2,201">Tab</div>
-                </div>
-                <div class="tab">
-                  <div class="tab-text tab-badge" data-badge="2,858">Tab</div>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#toggle"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+            </section>
+            <!--Radio Button-->
+            <section id="radiobutton-anchor">
+              <h2 class="h2">Radio button</h2>
+              <p class="p-large">Use the  <code>.radiobutton</code> class.</p>
+              <hr />
+              <label class="radiobutton">
+                <input type="radio" value="0" name="radio" checked="" />
+                <span>First</span>
+              </label>
+              <label class="radiobutton">
+                <input type="radio" value="1" name="radio" />
+                <span>Second</span>
+              </label>
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre id="radiobutton" class="textarea language-html"><code>&lt;label class="radiobutton"&gt;
+        &lt;input type="radio" value="0" name="radio" checked=""&gt;
+        &lt;span&gt;First&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class="radiobutton"&gt;
+        &lt;input type="radio" value="1" name="radio"&gt;
+        &lt;span&gt;Second&lt;/span&gt;
+    &lt;/label&gt;</code></pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#radiobutton"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+            </section>
+            <!--Link-->
+            <section id="link-anchor">
+              <h2 class="h2">Link</h2>
+              <p class="p-large">
+                Use the  <code>.link</code> class to stlye the <code><span><</span>a<span>></span></code
+                >tag
+              </p>
+              <p class="p-large">Use the <code>.link-primary</code> to add modificator for color.</p>
+              <hr />
+              <a class="link link-primary" href="">Primary</a>
+              <a class="link link-danger" href="">Danger</a>
+              <a class="link link-text" href="">Text</a>
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre id="link" class="textarea language-html"><code>&lt;a class="link link-primary" href=""&gt;Primary&lt;/a&gt;</code></pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#link"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+            </section>
+            <!--Textarea-->
+            <section id="textarea-anchor">
+              <h2 class="h2">Textarea</h2>
+              <p class="p-large">Use a <code>.form-group</code>to group the textarea with label and status if needed.</p>
+              <hr />
+              <div class="form-group">
+                <label>Label</label>
+                <textarea
+                  class="textarea language-html"
+                  placeholder="Placeholder text"
+                  spellcheck="true"
+                  rows="4"
+                ></textarea>
+              </div>
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre id="textarea-input" class="textarea language-html"><code>&lt;div class="form-group"&gt;
+    &lt;label&gt;Textarea&lt;/label&gt;
+    &lt;textarea
+      class="textarea language-html"
+      placeholder="Placeholder text"
+      spellcheck="true"
+      rows="4"
+    &gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+      </code>
+                </pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#textarea-input"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+            </section>
+            <!--Input-->
+            <section id="input-anchor">
+              <h2 class="h2">Input</h2>
+              <p class="p-large">Use a <code>.form-group</code>to group the input with label and status if needed.</p>
+              <p class="p-large">You can find two sizes of inputs: <code>.input</code> and <code>.input-small</code></p>
+              For <code>.input-small</code> combine it with a <code>.form-group-small</code> as wrapping style.
+              <hr />
+              <div class="form-group">
+                <label>Input</label>
+                <input class="input" type="text" placeholder="Enter something" />
+              </div>
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre id="input" class="textarea language-html"><code>&lt;div class="form-group"&gt;
+    &lt;label&gt;Input&lt;/label&gt;
+    &lt;input class="input" type="text" placeholder="Enter something"/&gt;
+  &lt;/div&gt;</code>
+                        </pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#input"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+              <div class="form-group form-group-small">
+                <label>Small input</label>
+                <input class="input input-small" type="text" placeholder="Enter something" />
+              </div>
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre id="input-small" class="textarea language-html"><code>&lt;div class="form-group-small"&gt;
+    &lt;label&gt;Input&lt;/label&gt;
+    &lt;input class="input input-small" type="text" placeholder="Enter something"/&gt;
+  &lt;/div&gt;</code></pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#input-small"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+              <div class="form-group form-group-small success">
+                <label>Small valid input</label>
+                <input class="input input-small" type="text" placeholder="Enter something" value="Valid value" />
+                <div class="status-text">Saved</div>
+              </div>
+              <div class="form-group form-group-small error">
+                <label>Small invalid input</label>
+                <input class="input input-small" type="text" placeholder="Enter something" value="Invalid value" />
+                <div class="status-text">Not saved</div>
+              </div>
+            </section>
+            <!--Select-->
+            <section id="select-anchor">
+              <h2 class="h2">Select</h2>
+              <p class="p-large">Use a <code>.select</code>class to style your <code>select</code> HTML Element.</p>
+              <hr />
+              <select class="select">
+                <option value="1">Option one</option>
+                <option value="3">Option two</option>
+                <option value="4">Option three</option>
+                <option value="5">Option four</option>
+              </select>
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre id="select" class="textarea language-html"><code>&lt;select class="select"&gt;
+    &lt;option value="1"&gt;Option one&lt;/option&gt;
+    &lt;option value="3"&gt;Option two&lt;/option&gt;
+    &lt;option value="4"&gt;Option three&lt;/option&gt;
+    &lt;option value="5"&gt;Option four&lt;/option&gt;
+  &lt;/select&gt;</code></pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#select"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+            </section>
+            <!--Tabs-->
+            <section id="tabs-anchor">
+              <h2 class="h2">Tabs</h2>
+              <p class="p-large">
+                Use a <code>.tabs</code>class to style your wrapper. Use <code>.tab</code> to style each pill.
+              </p>
+              <p class="p-large">
+                You can add <code>data-badge</code> attribute if you want to present a numerical values inside each tab.
+              </p>
+              <hr />
+              <div class="tabs">
+                <div class="tabs-header-list">
+                  <div class="tab tab-active">
+                    <div class="tab-text tab-badge" data-badge="1,000">Tab</div>
+                  </div>
+                  <div class="tab">
+                    <div class="tab-text tab-badge" data-badge="2,201">Tab</div>
+                  </div>
+                  <div class="tab">
+                    <div class="tab-text tab-badge" data-badge="2,858">Tab</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre id="tabs" class="textarea language-html"><code>&lt;div class="tabs"&gt;
-  &lt;div class="tabs-header-list"&gt;
-    &lt;div class="tab tab-active"&gt;
-      &lt;div class="tab-text tab-badge" data-badge="1,000"&gt;Tab&lt;/div&gt;
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre id="tabs" class="textarea language-html"><code>&lt;div class="tabs"&gt;
+    &lt;div class="tabs-header-list"&gt;
+      &lt;div class="tab tab-active"&gt;
+        &lt;div class="tab-text tab-badge" data-badge="1,000"&gt;Tab&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="tab"&gt;
+        &lt;div class="tab-text tab-badge" data-badge="2,201"&gt;Tab&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="tab"&gt;
+        &lt;div class="tab-text tab-badge" data-badge="2,858"&gt;Tab&lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class="tab"&gt;
-      &lt;div class="tab-text tab-badge" data-badge="2,201"&gt;Tab&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="tab"&gt;
-      &lt;div class="tab-text tab-badge" data-badge="2,858"&gt;Tab&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
- &lt;/div&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#tabs"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-          </section>
-        </div>
+  &lt;/div&gt;</code></pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#tabs"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+            </section>
+          </div>
+        </main> 
       </grid>
     </div>
   </body>
