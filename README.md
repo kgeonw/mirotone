@@ -1,10 +1,10 @@
 # Mirotone
 
-## Intro​
+### Intro​
 
 Mirotone is a small & lightweight skeleton UI Kit that tries to match Miro styles for building apps and plugins. The package contains a HTML & CSS files which can be used for any project.
 ​
-## Getting started
+### Getting started
 
 Install the package as a dependancy on your own project by running
 ​
@@ -27,7 +27,7 @@ Use standart css linking to use the styles right away in your project
 <link rel="stylesheet" href="https://unpkg.com/mirotone/dist/styles.css" />
 ```
 
-## Components
+### Components
 ​
 - typography
 - icons
@@ -71,7 +71,7 @@ npm run watch
 ​
 ### Roadmap
 ​
-- Improve the documemntation 
+- Improve the documentation 
 - Add Templates & layout
 
 ​

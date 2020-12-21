@@ -1,4 +1,11 @@
 /* CHECKBOX */
+
+input {
+  width: 14px;
+  height: 14px;
+  margin: 2px;
+}
+
 .checkbox {
   position: relative;
   display: flex;
@@ -13,17 +20,13 @@
 }
 
 .checkbox span {
-  margin-left: 28px;
+  margin: -2px 10px 0px 10px;
 }
 
-.checkbox input {
-  display: none;
-}
-
-.checkbox span:before {
+.checkbox span::before {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -1px;
+  left: 1px;
   content: '';
   display: block;
   height: 16px;
@@ -36,24 +39,29 @@
   transform: translateY(2px);
 }
 
-.checkbox:hover span:before {
+.checkbox:hover span::before {
   border-color: var(--blue700);
 }
 
-.checkbox input:checked + span:before {
+input[type="checkbox"]:focus {
+  outline: var(--blue700) 1px solid;
+  outline-style: auto;
+}
+
+.checkbox input:checked + span::before {
   border-color: var(--blue700);
   background-color: var(--blue700);
 }
 
-.checkbox:hover input:checked + span:before {
+.checkbox:hover input:checked + span::before {
   background-color: var(--blue800);
 }
 
-.checkbox span:after {
+.checkbox span::after {
   content: '';
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 1px;
+  top: 1px;
   display: block;
   width: 16px;
   height: 16px;
@@ -62,10 +70,9 @@
   transform: scale(0);
   transform-origin: 50%;
   transition: transform 250ms 200ms;
-  top: 2px;
 }
 
-.checkbox input:checked + span:after {
+.checkbox input:checked + span::after {
   transform: scale(1);
 }
 

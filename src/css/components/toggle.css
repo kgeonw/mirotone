@@ -85,11 +85,18 @@
 }
 
 .toggle:not(.toggle--disabled):hover span::before {
-  background-color: #bdbdbd;
+  background-color: var(--indigo400);
 }
+
 
 .toggle:not(.toggle--disabled):hover input[type='checkbox']:checked + span::before {
   background-color: var(--blue800);
+}
+
+.toggle:focus input[type='checkbox'] + span::before {
+  outline: var(--blue700) 1px solid;
+  outline-style: auto;
+  outline-offset: 1px;
 }
 
 .toggle.toggle--disabled {

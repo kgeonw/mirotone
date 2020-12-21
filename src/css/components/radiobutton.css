@@ -19,21 +19,21 @@
   display: none;
 }
 
-.radiobutton input:checked + span:before {
+.radiobutton input:checked + span::before {
   background-color: var(--blue700);
   border-color: var(--blue700);
 }
 
-.radiobutton input:checked + span:after {
+.radiobutton input:checked + span::after {
   transform: scale(1);
 }
 
-.radiobutton input:checked + span:active:before {
+.radiobutton input:checked + span:active::before {
   background-color: var(--blue900);
   border-color: var(--blue900);
 }
 
-.radiobutton input:checked:disabled + span:before {
+.radiobutton input:checked:disabled + span::before {
   opacity: 0.2;
   border-color: var(--blue700);
 }
@@ -42,7 +42,7 @@
   color: var(--indigo500);
 }
 
-.radiobutton input:disabled + span:before {
+.radiobutton input:disabled + span::before {
   opacity: 0.4;
   border-color: var(--indigo400);
 }
@@ -52,15 +52,15 @@
   padding-left: 28px;
 }
 
-.radiobutton span:before,
-.radiobutton span:after {
+.radiobutton span::before,
+.radiobutton span::after {
   position: absolute;
   content: '';
   border-radius: var(--border-radius-circle);
   box-sizing: border-box;
 }
 
-.radiobutton span:before {
+.radiobutton span::before {
   top: 2px;
   left: 0;
   width: 16px;
@@ -70,7 +70,7 @@
   transition: border-color 250ms, background-color 250ms, opacity 250ms;
 }
 
-.radiobutton span:after {
+.radiobutton span::after {
   top: 7px;
   left: 5px;
   width: 6px;
@@ -81,10 +81,10 @@
   transition: transform 250ms 200ms;
 }
 
-.radiobutton span:hover:before {
+.radiobutton span:hover::before {
   border-color: var(--blue600);
 }
 
-.radiobutton span:active:before {
+.radiobutton span:active::before {
   border-color: var(--blue700);
 }

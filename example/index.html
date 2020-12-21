@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <title>Mirotone</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css" />
-    <link rel='icon' href='mirotone.svg' type='image/x-icon'/ >
-    <link rel="stylesheet" href="https://unpkg.com/mirotone/dist/styles.css" />
+    <link rel='icon' href='mirotone.svg' type='image/x-icon'/>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/mirotone/dist/styles.css" /> -->
+    <link rel="stylesheet" href="/dist/styles.css">
+    <meta name="description" content="Mirotone is a small & lightweight skeleton UI Kit that tries to match Miro styles for building apps and plugins.">
+    <meta name="keywords" content="Mirotone, design system, plugins, apps">
+    <meta name="author" content="Boris Kirov">
+    <meta property="og:title" content="Mirotone">
+    <meta property="og:description" content="Small & lightweight skeleton UI Kit that tries to match Miro styles for building apps and plugins.">
+    <meta property="og:image" content="https://i.ibb.co/9gqwyzY/thumbnails.jpg">
+    <meta name="twitter:card" content="https://i.ibb.co/9gqwyzY/thumbnails.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       html {
         scroll-behavior: smooth;
@@ -39,7 +49,7 @@
 
       .code-wrapper pre {
         font-size: var(--font-size-large);
-        font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+        font-family: 'SFMono-Regular', Consolas, "Liberation Mono", Menlo, Courier, monospace;
         background-color: var(--indigo50);
         border: none;
         padding: 16px 54px 16px 16px;
@@ -88,7 +98,7 @@
       }
 
       code {
-        font-family: 'Consolas', 'Monaco','Andale Mono','Ubuntu Mono',monospace;
+        font-family: 'SFMono-Regular', Consolas, "Liberation Mono", Menlo, Courier, monospace;
         background-color: var(--indigo50);
         font-size: var(--font-size-medium);
         padding: 8px;
@@ -109,10 +119,9 @@
   </head>
   <body>
     <div class="wrapper">
-      <grid style="display: grid; grid-template-columns: repeat(1, 1fr)">
-        <div>
+      <main>
           <div class="heading" style="display: flex;">
-            <h1 class="h1" style="font-size: 5vw; font-weight: var(--font-weight-black); line-height: 1.4;">Mirotone</h1>
+            <h1 class="h1" style="font-size: calc((12px + 0.698vw)* 3); font-weight: var(--font-weight-black); line-height: 1.4; margin-bottom: 0;">Mirotone</h1>
           </div>
           <p class="p-large">
             Mirotone is a small & lightweight skeleton UI Kit that tries to match Miro styles for building apps and plugins.
@@ -128,7 +137,11 @@
               <pre
                 id="npm-install"
                 class="textarea language-html"
-              ><code>npm install mirotone // yarn add mirotone</code></pre>
+              ><code class="language-html">npm install mirotone 
+
+ // or with yarn
+
+ yarn add mirotone</code></pre>
               <!-- Trigger -->
               <button
                 class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -154,6 +167,7 @@
                 <span class="tooltiptext">Copy to clipboard</span>
               </button>
             </div>
+            <p class="p-medium">Read more on <a href="https://github.com/boriskirov/mirotone" class="link link-primary">Github</a></p>
           </section>
           <section>
             <h2 class="h2">How does it work</h2>
@@ -167,23 +181,22 @@
             <button class="button button-primary">Primary button</button>
             <hr />
           </section>
-        </div>
-        <main>
+        <div>
           <div class="content">
             <section>
               <h2 class="h2">Content</h2>
               <ul>
-                <li><a class="link link-primary" href="#typography-anchor">Typography</a></li>
-                <li><a class="link link-primary" href="#icons-anchor">Icons</a></li>
-                <li><a class="link link-primary" href="#buttons-anchor">Buttons</a></li>
-                <li><a class="link link-primary" href="#checkbox-anchor">Checkbox</a></li>
-                <li><a class="link link-primary" href="#toggle-anchor">Toggle</a></li>
-                <li><a class="link link-primary" href="#radiobutton-anchor">Radio button</a></li>
-                <li><a class="link link-primary" href="#link-anchor">Link</a></li>
-                <li><a class="link link-primary" href="#textarea-anchor">Textarea</a></li>
-                <li><a class="link link-primary" href="#input-anchor">Input</a></li>
-                <li><a class="link link-primary" href="#select-anchor">Select</a></li>
-                <li><a class="link link-primary" href="#tabs-anchor">Tabs</a></li>
+                <li><a class="link link-text" href="#typography-anchor">Typography</a></li>
+                <li><a class="link link-text" href="#icons-anchor">Icons</a></li>
+                <li><a class="link link-text" href="#buttons-anchor">Buttons</a></li>
+                <li><a class="link link-text" href="#checkbox-anchor">Checkbox</a></li>
+                <li><a class="link link-text" href="#toggle-anchor">Toggle</a></li>
+                <li><a class="link link-text" href="#radiobutton-anchor">Radio button</a></li>
+                <li><a class="link link-text" href="#link-anchor">Link</a></li>
+                <li><a class="link link-text" href="#textarea-anchor">Textarea</a></li>
+                <li><a class="link link-text" href="#input-anchor">Input</a></li>
+                <li><a class="link link-text" href="#select-anchor">Select</a></li>
+                <li><a class="link link-text" href="#tabs-anchor">Tabs</a></li>
               </ul>
               <hr />
             </section>
@@ -272,7 +285,7 @@
             <section id="buttons-anchor">
               <h2 class="h2">Buttons</h2>
               <p class="p-large">
-                When using buttons please add <code></code> for accessibility. You can find two sizes of buttons:
+                You can find two sizes of buttons:
                 <code>.button</code> and <code>.button-small</code>
               </p>
               <hr />
@@ -289,7 +302,7 @@
                     id="button-primary"
                     class="textarea language-html"
                   ><code>&lt;button class="button button-primary"&gt;Primary button&lt;/button&gt;
-  &lt;button class="button button-primary button-small"&gt;Primary small&lt;/button&gt;</code></pre>
+ &lt;button class="button button-primary button-small"&gt;Primary small&lt;/button&gt;</code></pre>
                   <!-- Trigger -->
                   <button
                     class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -311,7 +324,7 @@
                     id="button-secondary"
                     class="textarea language-html"
                   ><code>&lt;button class="button button-secondary"&gt;Secondary button&lt;/button&gt;
-  &lt;button class="button button-secondary button-small"&gt;Secondary small&lt;/button&gt;</code></pre>
+ &lt;button class="button button-secondary button-small"&gt;Secondary small&lt;/button&gt;</code></pre>
                   <!-- Trigger -->
                   <button
                     class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -335,7 +348,7 @@
                   id="button-danger"
                   class="textarea language-html"
                 ><code>&lt;button class="button button-danger"&gt;Danger button&lt;/button&gt;
-  &lt;button class="button button-danger button-small"&gt;Danger small&lt;/button&gt;</code></pre>
+ &lt;button class="button button-danger button-small"&gt;Danger small&lt;/button&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -358,7 +371,7 @@
                   id="button-secondary-border"
                   class="textarea language-html"
                 ><code>&lt;button class="button button-secondary-border"&gt;Secondary Border button&lt;/button&gt;
-  &lt;button class="button button-secondary-border button-small"&gt;Secondary Border small&lt;/button&gt;</code></pre>
+ &lt;button class="button button-secondary-border button-small"&gt;Secondary Border small&lt;/button&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -381,7 +394,7 @@
                   id="button-danger-border"
                   class="textarea language-html"
                 ><code>&lt;button class="button button-danger-border"&gt;Danger Border button&lt;/button&gt;
-  &lt;button class="button button-danger-border button-small"&gt;Danger Border small&lt;/button&gt;</code></pre>
+ &lt;button class="button button-danger-border button-small"&gt;Danger Border small&lt;/button&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -403,7 +416,7 @@
                   id="button-primary"
                   class="textarea language-html"
                 ><code>&lt;button class="button button-primary" disabled&gt;Primary button&lt;/button&gt;
-  &lt;button class="button button-primary button-small" disabled&gt;Primary small&lt;/button&gt;</code></pre>
+ &lt;button class="button button-primary button-small" disabled&gt;Primary small&lt;/button&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -456,7 +469,7 @@
                   id="checkbox"
                   class="textarea language-html"
                 ><code>&lt;label class="checkbox"&gt; &lt;input type="checkbox" checked=""&gt; &lt;span&gt;Checkbox&lt;/span&gt; &lt;/label&gt;
-  &lt;label class="checkbox"&gt; &lt;input type="checkbox"&gt; &lt;span&gt;Checkbox&lt;/span&gt; &lt;/label&gt;</code></pre>
+ &lt;label class="checkbox"&gt; &lt;input type="checkbox"&gt; &lt;span&gt;Checkbox&lt;/span&gt; &lt;/label&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -482,13 +495,13 @@
               <div class="code-wrapper">
                 <!-- Target -->
                 <pre id="toggle" class="textarea language-html"><code>&lt;label class="toggle"&gt;
-      &lt;input type="checkbox" checked=""&gt;
-      &lt;span&gt;First toggle&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;label class="toggle"&gt;
-      &lt;input type="checkbox"&gt;
-      &lt;span&gt;Second toggle&lt;/span&gt;
-  &lt;/label&gt;</code></pre>
+  &lt;input type="checkbox" checked=""&gt;
+  &lt;span&gt;First toggle&lt;/span&gt;
+ &lt;/label&gt;
+ &lt;label class="toggle"&gt;
+  &lt;input type="checkbox"&gt;
+  &lt;span&gt;Second toggle&lt;/span&gt;
+ &lt;/label&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -514,13 +527,13 @@
               <div class="code-wrapper">
                 <!-- Target -->
                 <pre id="radiobutton" class="textarea language-html"><code>&lt;label class="radiobutton"&gt;
-        &lt;input type="radio" value="0" name="radio" checked=""&gt;
-        &lt;span&gt;First&lt;/span&gt;
-    &lt;/label&gt;
-    &lt;label class="radiobutton"&gt;
-        &lt;input type="radio" value="1" name="radio"&gt;
-        &lt;span&gt;Second&lt;/span&gt;
-    &lt;/label&gt;</code></pre>
+  &lt;input type="radio" value="0" name="radio" checked=""&gt;
+  &lt;span&gt;First&lt;/span&gt;
+ &lt;/label&gt;
+ &lt;label class="radiobutton"&gt;
+  &lt;input type="radio" value="1" name="radio"&gt;
+  &lt;span&gt;Second&lt;/span&gt;
+ &lt;/label&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -571,15 +584,9 @@
               <div class="code-wrapper">
                 <!-- Target -->
                 <pre id="textarea-input" class="textarea language-html"><code>&lt;div class="form-group"&gt;
-    &lt;label&gt;Textarea&lt;/label&gt;
-    &lt;textarea
-      class="textarea language-html"
-      placeholder="Placeholder text"
-      spellcheck="true"
-      rows="4"
-    &gt;&lt;/textarea&gt;
-  &lt;/div&gt;
-      </code>
+  &lt;label&gt;Textarea&lt;/label&gt;
+  &lt;textarea class="textarea language-html" placeholder="Placeholder text" spellcheck="true" rows="4"&gt;&lt;/textarea&gt;
+ &lt;/div&gt;</code>
                 </pre>
                 <!-- Trigger -->
                 <button
@@ -604,9 +611,9 @@
               <div class="code-wrapper">
                 <!-- Target -->
                 <pre id="input" class="textarea language-html"><code>&lt;div class="form-group"&gt;
-    &lt;label&gt;Input&lt;/label&gt;
-    &lt;input class="input" type="text" placeholder="Enter something"/&gt;
-  &lt;/div&gt;</code>
+  &lt;label&gt;Input&lt;/label&gt;
+  &lt;input class="input" type="text" placeholder="Enter something"/&gt;
+ &lt;/div&gt;</code>
                         </pre>
                 <!-- Trigger -->
                 <button
@@ -659,11 +666,11 @@
               <div class="code-wrapper">
                 <!-- Target -->
                 <pre id="select" class="textarea language-html"><code>&lt;select class="select"&gt;
-    &lt;option value="1"&gt;Option one&lt;/option&gt;
-    &lt;option value="3"&gt;Option two&lt;/option&gt;
-    &lt;option value="4"&gt;Option three&lt;/option&gt;
-    &lt;option value="5"&gt;Option four&lt;/option&gt;
-  &lt;/select&gt;</code></pre>
+  &lt;option value="1"&gt;Option one&lt;/option&gt;
+  &lt;option value="3"&gt;Option two&lt;/option&gt;
+  &lt;option value="4"&gt;Option three&lt;/option&gt;
+  &lt;option value="5"&gt;Option four&lt;/option&gt;
+ &lt;/select&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -680,18 +687,18 @@
                 Use a <code>.tabs</code>class to style your wrapper. Use <code>.tab</code> to style each pill.
               </p>
               <p class="p-large">
-                You can add <code>data-badge</code> attribute if you want to present a numerical values inside each tab.
+                You can add <code>data-badge</code> attribute if you want to present a numerical values inside each tab. You can use <code>tabindex="0"</code> for indicating that its element can be focused.
               </p>
               <hr />
               <div class="tabs">
                 <div class="tabs-header-list">
-                  <div class="tab tab-active">
+                  <div tabindex="0" class="tab tab-active">
                     <div class="tab-text tab-badge" data-badge="1,000">Tab</div>
                   </div>
-                  <div class="tab">
+                  <div tabindex="0" class="tab">
                     <div class="tab-text tab-badge" data-badge="2,201">Tab</div>
                   </div>
-                  <div class="tab">
+                  <div tabindex="0" class="tab">
                     <div class="tab-text tab-badge" data-badge="2,858">Tab</div>
                   </div>
                 </div>
@@ -699,18 +706,18 @@
               <div class="code-wrapper">
                 <!-- Target -->
                 <pre id="tabs" class="textarea language-html"><code>&lt;div class="tabs"&gt;
-    &lt;div class="tabs-header-list"&gt;
-      &lt;div class="tab tab-active"&gt;
-        &lt;div class="tab-text tab-badge" data-badge="1,000"&gt;Tab&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="tab"&gt;
-        &lt;div class="tab-text tab-badge" data-badge="2,201"&gt;Tab&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="tab"&gt;
-        &lt;div class="tab-text tab-badge" data-badge="2,858"&gt;Tab&lt;/div&gt;
-      &lt;/div&gt;
+  &lt;div class="tabs-header-list"&gt;
+    &lt;div tabindex="0" class="tab tab-active"&gt;
+      &lt;div class="tab-text tab-badge" data-badge="1,000"&gt;Tab&lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;</code></pre>
+    &lt;div tabindex="0" class="tab"&gt;
+      &lt;div class="tab-text tab-badge" data-badge="2,201"&gt;Tab&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div tabindex="0" class="tab"&gt;
+      &lt;div class="tab-text tab-badge" data-badge="2,858"&gt;Tab&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -721,8 +728,8 @@
               </div>
             </section>
           </div>
-        </main> 
-      </grid>
+        </div> 
+      </main>
     </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"></script>

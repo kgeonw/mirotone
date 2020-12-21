@@ -135,7 +135,7 @@
 }
 
 .button-danger-border:enabled:hover,
-.button--danger-border:focus {
+.button-danger-border:enabled:focus {
   background-color: var(--red50);
 }
 
