@@ -88,7 +88,6 @@
   background-color: var(--indigo400);
 }
 
-
 .toggle:not(.toggle--disabled):hover input[type='checkbox']:checked + span::before {
   background-color: var(--blue800);
 }

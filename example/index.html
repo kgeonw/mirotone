@@ -263,8 +263,99 @@
                 You can use the Miro icons by adding class <code>.icon</code> + <code>.icon-eye</code>, eye in this case
                 is the icon name. You can find all icons in the <code>dist/icons</code> folder.
               </p>
-              <div class="row" style="display: flex; flex-direction: row">
+              <div class="row" style="display: flex; flex-wrap: wrap;">
+                <div class="icon icon-add-collumn-right"></div>
+                <div class="icon icon-add-row-bottom"></div>
+                <div class="icon icon-align-left"></div>
+                <div class="icon icon-arrow-right"></div>
+                <div class="icon icon-arrow-up"></div>
+                <div class="icon icon-author-cursor-view"></div>
+                <div class="icon icon-back-1"></div>
+                <div class="icon icon-back"></div>
+                <div class="icon icon-bell"></div>
+                <div class="icon icon-billing"></div>
+                <div class="icon icon-bold-BUI"></div>
+                <div class="icon icon-bullet-list"></div>
+                <div class="icon icon-calendar"></div>
+                <div class="icon icon-card-list"></div>
+                <div class="icon icon-checkbox"></div>
+                <div class="icon icon-close"></div>
+                <div class="icon icon-collapse"></div>
+                <div class="icon icon-comment-feedback"></div>
+                <div class="icon icon-cursor-user"></div>
+                <div class="icon icon-cursor"></div>
+                <div class="icon icon-deactivated"></div>
+                <div class="icon icon-download"></div>
+                <div class="icon icon-drag"></div>
+                <div class="icon icon-duplicate"></div>
+                <div class="icon icon-embed"></div>
+                <div class="icon icon-eraser"></div>
+                <div class="icon icon-expand"></div>
+                <div class="icon icon-export"></div>
                 <div class="icon icon-eye"></div>
+                <div class="icon icon-filters"></div>
+                <div class="icon icon-fit"></div>
+                <div class="icon icon-folder"></div>
+                <div class="icon icon-frame"></div>
+                <div class="icon icon-frames"></div>
+                <div class="icon icon-grid"></div>
+                <div class="icon icon-help-question"></div>
+                <div class="icon icon-help"></div>
+                <div class="icon icon-home"></div>
+                <div class="icon icon-image"></div>
+                <div class="icon icon-invitation"></div>
+                <div class="icon icon-key"></div>
+                <div class="icon icon-layers"></div>
+                <div class="icon icon-learn"></div>
+                <div class="icon icon-link"></div>
+                <div class="icon icon-magnet"></div>
+                <div class="icon icon-map"></div>
+                <div class="icon icon-merge"></div>
+                <div class="icon icon-mic-off"></div>
+                <div class="icon icon-mic-on"></div>
+                <div class="icon icon-minus"></div>
+                <div class="icon icon-more"></div>
+                <div class="icon icon-numbered-list"></div>
+                <div class="icon icon-oval"></div>
+                <div class="icon icon-parameters"></div>
+                <div class="icon icon-pdf"></div>
+                <div class="icon icon-pen"></div>
+                <div class="icon icon-photo"></div>
+                <div class="icon icon-pin"></div>
+                <div class="icon icon-play"></div>
+                <div class="icon icon-plus"></div>
+                <div class="icon icon-private"></div>
+                <div class="icon icon-public"></div>
+                <div class="icon icon-rectangle"></div>
+                <div class="icon icon-redo"></div>
+                <div class="icon icon-rounded"></div>
+                <div class="icon icon-screen-sharing"></div>
+                <div class="icon icon-search"></div>
+                <div class="icon icon-security"></div>
+                <div class="icon icon-settings"></div>
+                <div class="icon icon-shared-with"></div>
+                <div class="icon icon-sound-off"></div>
+                <div class="icon icon-sound-on"></div>
+                <div class="icon icon-star-1"></div>
+                <div class="icon icon-sticky-bulk"></div>
+                <div class="icon icon-sticky-recognition"></div>
+                <div class="icon icon-sticky"></div>
+                <div class="icon icon-stop"></div>
+                <div class="icon icon-team"></div>
+                <div class="icon icon-text-heading-one"></div>
+                <div class="icon icon-text-italic-BUI"></div>
+                <div class="icon icon-text-plus"></div>
+                <div class="icon icon-text-strikethrough-BUI"></div>
+                <div class="icon icon-text-underline-BUI"></div>
+                <div class="icon icon-text"></div>
+                <div class="icon icon-tile"></div>
+                <div class="icon icon-timer"></div>
+                <div class="icon icon-trash"></div>
+                <div class="icon icon-undo"></div>
+                <div class="icon icon-unmerge"></div>
+                <div class="icon icon-upload"></div>
+                <div class="icon icon-user"></div>
+                <div class="icon icon-video"></div>
               </div>
               <div class="code-wrapper">
                 <!-- Target -->
@@ -293,16 +384,17 @@
                 <!-- Primary button -->
                 <h3 class="h3">Primary button</h3>
                 <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
-                <p class="p-large">Use the <code>.button-primary</code> to add modificator for color.</p>
-                <button class="button button-primary">Primary button</button>
-                <button class="button button-primary button-small">Primary small</button>
+                <p class="p-large">Use the <code>.button-primary</code> to add modificator for color. 
+                  When using a button element, always specify a <code>type=""</code></p>   
+                <button class="button button-primary" type="button">Primary button</button>
+                <button class="button button-primary button-small" type="button">Primary small</button>
                 <div class="code-wrapper">
                   <!-- Target -->
                   <pre
                     id="button-primary"
                     class="textarea language-html"
-                  ><code>&lt;button class="button button-primary"&gt;Primary button&lt;/button&gt;
- &lt;button class="button button-primary button-small"&gt;Primary small&lt;/button&gt;</code></pre>
+                  ><code>&lt;button class="button button-primary" type="button"&gt;Primary button&lt;/button&gt;
+ &lt;button class="button button-primary button-small" type="button"&gt;Primary small&lt;/button&gt;</code></pre>
                   <!-- Trigger -->
                   <button
                     class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -315,16 +407,17 @@
                 <!-- Secondary button -->
                 <h3 class="h3">Secondary button</h3>
                 <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
-                <p class="p-large">Use the <code>.button-secondary</code> to add modificator for color.</p>
-                <button class="button button-secondary">Secondary button</button>
-                <button class="button button-secondary button-small">Secondary small</button>
+                <p class="p-large">Use the <code>.button-secondary</code> to add modificator for color.
+                  When using a button element, always specify a <code>type=""</code></p>   
+                <button class="button button-secondary" type="button">Secondary button</button>
+                <button class="button button-secondary button-small" type="button">Secondary small</button>
                 <div class="code-wrapper">
                   <!-- Target -->
                   <pre
                     id="button-secondary"
                     class="textarea language-html"
-                  ><code>&lt;button class="button button-secondary"&gt;Secondary button&lt;/button&gt;
- &lt;button class="button button-secondary button-small"&gt;Secondary small&lt;/button&gt;</code></pre>
+                  ><code>&lt;button class="button button-secondary" type="button"&gt;Secondary button&lt;/button&gt;
+ &lt;button class="button button-secondary button-small" type="button"&gt;Secondary small&lt;/button&gt;</code></pre>
                   <!-- Trigger -->
                   <button
                     class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -339,16 +432,17 @@
               <!-- Danger button -->
               <h3 class="h3">Danger button</h3>
               <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
-              <p class="p-large">Use the <code>.button-danger</code> to add modificator for color.</p>
-              <button class="button button-danger">Danger button</button>
-              <button class="button button-danger button-small">Danger small</button>
+              <p class="p-large">Use the <code>.button-danger</code> to add modificator for color.
+                When using a button element, always specify a <code>type=""</code></p>
+              <button class="button button-danger" type="button">Danger button</button>
+              <button class="button button-danger button-small" type="button">Danger small</button>
               <div class="code-wrapper">
                 <!-- Target -->
                 <pre
                   id="button-danger"
                   class="textarea language-html"
-                ><code>&lt;button class="button button-danger"&gt;Danger button&lt;/button&gt;
- &lt;button class="button button-danger button-small"&gt;Danger small&lt;/button&gt;</code></pre>
+                ><code>&lt;button class="button button-danger" type="button"&gt;Danger button&lt;/button&gt;
+ &lt;button class="button button-danger button-small" type="button"&gt;Danger small&lt;/button&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -362,16 +456,17 @@
               <!-- Secondary border button -->
               <h3 class="h3">Secondary border button</h3>
               <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
-              <p class="p-large">Use the <code>.button-secondary-border</code> to add modificator for color.</p>
-              <button class="button button-secondary-border">Secondary border button</button>
-              <button class="button button-secondary-border button-small">Secondary border small</button>
+              <p class="p-large">Use the <code>.button-secondary-border</code> to add modificator for color.
+                When using a button element, always specify a <code>type=""</code></p>
+              <button class="button button-secondary-border" type="button">Secondary border button</button>
+              <button class="button button-secondary-border button-small" type="button">Secondary border small</button>
               <div class="code-wrapper">
                 <!-- Target -->
                 <pre
                   id="button-secondary-border"
                   class="textarea language-html"
-                ><code>&lt;button class="button button-secondary-border"&gt;Secondary Border button&lt;/button&gt;
- &lt;button class="button button-secondary-border button-small"&gt;Secondary Border small&lt;/button&gt;</code></pre>
+                ><code>&lt;button class="button button-secondary-border" type="button"&gt;Secondary Border button&lt;/button&gt;
+ &lt;button class="button button-secondary-border button-small" type="button"&gt;Secondary Border small&lt;/button&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -385,16 +480,17 @@
               <!-- Danger border button -->
               <h3 class="h3">Danger border button</h3>
               <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
-              <p class="p-large">Use the <code>.button-danger-border</code> to add modificator for color.</p>
-              <button class="button button-danger-border">Danger border button</button>
-              <button class="button button-danger-border button-small">Danger border small</button>
+              <p class="p-large">Use the <code>.button-danger-border</code> to add modificator for color.
+                When using a button element, always specify a <code>type=""</code></p>
+              <button class="button button-danger-border" type="button">Danger border button</button>
+              <button class="button button-danger-border button-small" type="button">Danger border small</button>
               <div class="code-wrapper">
                 <!-- Target -->
                 <pre
                   id="button-danger-border"
                   class="textarea language-html"
-                ><code>&lt;button class="button button-danger-border"&gt;Danger Border button&lt;/button&gt;
- &lt;button class="button button-danger-border button-small"&gt;Danger Border small&lt;/button&gt;</code></pre>
+                ><code>&lt;button class="button button-danger-border" type="button"&gt;Danger Border button&lt;/button&gt;
+ &lt;button class="button button-danger-border button-small" type="button"&gt;Danger Border small&lt;/button&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -407,16 +503,17 @@
 
               <!-- Disabled button -->
               <h3 class="h3">Disabled button</h3>
-              <p class="p-large">Use the <code>disabled=""</code> attribute for disabling buttons.</p>
-              <button class="button button-primary" disabled>Disabled button</button>
-              <button class="button button-primary button-small" disabled>Disabled small</button>
+              <p class="p-large">Use the <code>disabled=""</code> attribute for disabling buttons.
+                When using a button element, always specify a <code>type=""</code></p>
+              <button class="button button-primary" type="button" disabled>Disabled button</button>
+              <button class="button button-primary button-small" type="button" disabled>Disabled small</button>
               <div class="code-wrapper">
                 <!-- Target -->
                 <pre
                   id="button-primary"
                   class="textarea language-html"
-                ><code>&lt;button class="button button-primary" disabled&gt;Primary button&lt;/button&gt;
- &lt;button class="button button-primary button-small" disabled&gt;Primary small&lt;/button&gt;</code></pre>
+                ><code>&lt;button class="button button-primary" type="button" disabled&gt;Primary button&lt;/button&gt;
+ &lt;button class="button button-primary button-small" type="button" disabled&gt;Primary small&lt;/button&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -432,14 +529,14 @@
                 Use the <code>.button-icon</code> class + <code>.icon-{name}</code> to render an icon button.
               </p>
               <p>Add the <code>.button-icon-small</code> if you want to add a smalller icon button.</p>
-              <button class="button-icon button-icon-small icon-eye"></button>
-              <button class="button-icon icon-eye"></button>
+              <button class="button-icon button-icon-small icon-eye" type="button"></button>
+              <button class="button-icon icon-eye" type="button"></button>
               <div class="code-wrapper">
                 <!-- Target -->
                 <pre
                   id="button-icon"
                   class="textarea language-html"
-                ><code>&lt;button class="button-icon icon-eye"&gt;&lt;/button&gt;</code></pre>
+                ><code>&lt;button class="button-icon icon-eye" type="button" &gt;&lt;/button&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -585,7 +682,7 @@
                 <!-- Target -->
                 <pre id="textarea-input" class="textarea language-html"><code>&lt;div class="form-group"&gt;
   &lt;label&gt;Textarea&lt;/label&gt;
-  &lt;textarea class="textarea language-html" placeholder="Placeholder text" spellcheck="true" rows="4"&gt;&lt;/textarea&gt;
+  &lt;textarea class="textarea" placeholder="Placeholder text" spellcheck="true" rows="4"&gt;&lt;/textarea&gt;
  &lt;/div&gt;</code>
                 </pre>
                 <!-- Trigger -->
@@ -602,7 +699,8 @@
               <h2 class="h2">Input</h2>
               <p class="p-large">Use a <code>.form-group</code>to group the input with label and status if needed.</p>
               <p class="p-large">You can find two sizes of inputs: <code>.input</code> and <code>.input-small</code></p>
-              For <code>.input-small</code> combine it with a <code>.form-group-small</code> as wrapping style.
+              <p>For <code>.input-small</code> combine it with a <code>.form-group-small</code> as wrapping style.</p>
+              <p>Input is supporting <code>disabled=''</code> attribute.</p>
               <hr />
               <div class="form-group">
                 <label>Input</label>

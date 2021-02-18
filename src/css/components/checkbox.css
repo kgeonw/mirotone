@@ -43,7 +43,7 @@ input {
   border-color: var(--blue700);
 }
 
-input[type="checkbox"]:focus {
+input[type='checkbox']:focus {
   outline: var(--blue700) 1px solid;
   outline-style: auto;
 }
