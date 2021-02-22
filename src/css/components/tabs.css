@@ -3,7 +3,7 @@
   background: var(--indigo200);
   border-radius: var(--border-radius-medium);
   padding: 2px;
-  margin: 16px 0px;
+  margin: var(--space-small) 0px;
 }
 
 .tabs .tabs-header-list {
@@ -28,7 +28,7 @@
   white-space: nowrap;
   border-radius: var(--border-radius-medium);
   width: 100%;
-  margin: 0 0 0 3px;
+  margin: 0 0 0 2px;
   position: relative;
 }
 
@@ -76,13 +76,13 @@
 
 .tabs .tab-text {
   display: inline-block;
-  padding: 5px 0;
+  padding: var(--space-xxsmall) 0;
 }
 
 .tabs .tab-badge::after {
   content: attr(data-badge);
   display: inline-block;
-  margin-left: 10px;
+  margin-left: var(--space-xsmall);
   color: var(--indigo600);
 }
 

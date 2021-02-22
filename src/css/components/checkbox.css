@@ -1,26 +1,26 @@
 /* CHECKBOX */
 
 input {
-  width: 14px;
-  height: 14px;
-  margin: 2px;
+  width: 16px;
+  height: 16px;
+  margin: 0px;
 }
 
 .checkbox {
   position: relative;
   display: flex;
-  vertical-align: top;
+  align-items: center;
   cursor: pointer;
   font-size: var(--font-size-medium);
-  min-height: 20px;
+  line-height: 20px;
 }
 
 .checkbox:nth-child(n) {
-  margin: 0px 0px 16px 0px;
+  margin: 0px 0px var(--space-small) 0px;
 }
 
 .checkbox span {
-  margin: -2px 10px 0px 10px;
+  margin: -1px var(--space-xsmall) 0px var(--space-small);
 }
 
 .checkbox span::before {

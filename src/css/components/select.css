@@ -12,7 +12,7 @@
   appearance: none;
   border: 1px solid;
   border-radius: var(--border-radius-medium);
-  padding: 13px 16px 13px;
+  padding: var(--space-xsmall) var(--space-small) var(--space-xsmall);
   font-size: var(--font-size-large);
   color: var(--indigo700);
   background-color: var(--white);
@@ -54,13 +54,6 @@
 }
 
 .select[disabled] {
-  display: inline-block;
-  vertical-align: top;
-  box-sizing: border-box;
-  border: 1px solid;
-  border-radius: var(--border-radius-medium);
-  padding: 11px 16px 13px;
-  font-size: var(--font-size-large);
   color: var(--indigo700);
   background-color: var(--white);
   border-color: var(--indigo400);

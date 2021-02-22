@@ -2,19 +2,27 @@
 <html lang="en">
   <head>
     <title>Mirotone</title>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css" />
-    <link rel='icon' href='mirotone.svg' type='image/x-icon'/>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/mirotone/dist/styles.css" /> -->
-    <link rel="stylesheet" href="/dist/styles.css">
-    <meta name="description" content="Mirotone is a small & lightweight skeleton UI Kit that tries to match Miro styles for building apps and plugins.">
-    <meta name="keywords" content="Mirotone, design system, plugins, apps">
-    <meta name="author" content="Boris Kirov">
-    <meta property="og:title" content="Mirotone">
-    <meta property="og:description" content="Small & lightweight skeleton UI Kit that tries to match Miro styles for building apps and plugins.">
-    <meta property="og:image" content="https://i.ibb.co/9gqwyzY/thumbnails.jpg">
-    <meta name="twitter:card" content="https://i.ibb.co/9gqwyzY/thumbnails.jpg">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="mirotone.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/mirotone/dist/styles.css" />
+    {#
+    <link rel="stylesheet" href="./dist/styles.css" />
+    #}
+    <meta
+      name="description"
+      content="Mirotone is a small & lightweight skeleton UI Kit that tries to match Miro styles for building apps and plugins."
+    />
+    <meta name="keywords" content="Mirotone, design system, plugins, apps" />
+    <meta name="author" content="Boris Kirov" />
+    <meta property="og:title" content="Mirotone" />
+    <meta
+      property="og:description"
+      content="Small & lightweight skeleton UI Kit that tries to match Miro styles for building apps and plugins."
+    />
+    <meta property="og:image" content="https://i.ibb.co/9gqwyzY/thumbnails.jpg" />
+    <meta name="twitter:card" content="https://i.ibb.co/9gqwyzY/thumbnails.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       html {
         scroll-behavior: smooth;
@@ -49,7 +57,7 @@
 
       .code-wrapper pre {
         font-size: var(--font-size-large);
-        font-family: 'SFMono-Regular', Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
         background-color: var(--indigo50);
         border: none;
         padding: 16px 54px 16px 16px;
@@ -98,89 +106,100 @@
       }
 
       code {
-        font-family: 'SFMono-Regular', Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
         background-color: var(--indigo50);
         font-size: var(--font-size-medium);
         padding: 8px;
-        border-radius: var(--border-radius-small);
+        border-radius: var(--border-radius-medium);
         color: var(--blue900);
       }
 
-      code[class*="language-"], pre[class*="language-"] {
-        font-family: 'SFMono-Regular', Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      code[class*='language-'],
+      pre[class*='language-'] {
+        font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
         font-size: var(--font-size-medium);
       }
 
-      .token.atrule, .token.attr-value, .token.keyword {
+      .token.atrule,
+      .token.attr-value,
+      .token.keyword {
         color: var(--blue900);
       }
-
     </style>
   </head>
   <body>
     <div class="wrapper">
       <main>
-          <div class="heading" style="display: flex;">
-            <h1 class="h1" style="font-size: calc((12px + 0.698vw)* 3); font-weight: var(--font-weight-black); line-height: 1.4; margin-bottom: 0;">Mirotone</h1>
-          </div>
-          <p class="p-large">
-            Mirotone is a small & lightweight skeleton UI Kit that tries to match Miro styles for building apps and plugins.
-            The package contains a HTML & CSS files which can be used for any project.
-          </p>
-          <section>
-            <h2 class="h2">Getting started</h2>
-            <p class="p-large">
-              Install the package as a dependancy on your own project by running 
-            </p>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre
-                id="npm-install"
-                class="textarea language-html"
-              ><code class="language-html">npm install mirotone 
+        <div class="heading" style="display: flex">
+          <h1
+            class="h1"
+            style="
+              font-size: calc((12px + 0.698vw) * 3);
+              font-weight: var(--font-weight-black);
+              line-height: 1.4;
+              margin-bottom: 0;
+            "
+          >
+            Mirotone
+          </h1>
+        </div>
+        <p class="p-large">
+          Mirotone is a small & lightweight skeleton UI Kit that tries to match Miro styles for building apps and
+          plugins. The package contains a HTML & CSS files which can be used for any project.
+        </p>
+        <section>
+          <h2 class="h2">Getting started</h2>
+          <p class="p-large">Install the package as a dependancy on your own project by running</p>
+          <div class="code-wrapper">
+            <!-- Target -->
+            <pre id="npm-install" class="textarea language-html"><code class="language-html">npm install mirotone 
 
  // or with yarn
 
  yarn add mirotone</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#npm-install"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-            <p class="p-large">
-              Link the css directly by standart css linking, recommended to be used if you don't want to consume the package and icons pack
-            </p>
-            <div class="code-wrapper">
-              <!-- Target -->
-              <pre
-                id="css-link"
-                class="textarea language-html"
-              ><code>&lt;link rel="stylesheet" href="https://unpkg.com/mirotone/dist/styles.css"&gt;</code></pre>
-              <!-- Trigger -->
-              <button
-                class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
-                data-clipboard-target="#css-link"
-              >
-                <span class="tooltiptext">Copy to clipboard</span>
-              </button>
-            </div>
-            <p class="p-medium">Read more on <a href="https://github.com/boriskirov/mirotone" class="link link-primary">Github</a></p>
-          </section>
-          <section>
-            <h2 class="h2">How does it work</h2>
-            <p>Mirotone uses the BEM naming conventation. You define the type of CSS and add a modifier to it.</p>
-            <p>
-              Example:
-              <code>
-                <span><</span>button class="button button-primary"<span>></span>Primary button<span><<span>/</span></span>button<span>></span>
-              </code>
-            </p>
-            <button class="button button-primary">Primary button</button>
-            <hr />
-          </section>
+            <!-- Trigger -->
+            <button
+              class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+              data-clipboard-target="#npm-install"
+            >
+              <span class="tooltiptext">Copy to clipboard</span>
+            </button>
+          </div>
+          <p class="p-large">
+            Link the css directly by standart css linking, recommended to be used if you don't want to consume the
+            package and icons pack
+          </p>
+          <div class="code-wrapper">
+            <!-- Target -->
+            <pre
+              id="css-link"
+              class="textarea language-html"
+            ><code>&lt;link rel="stylesheet" href="https://unpkg.com/mirotone/dist/styles.css"&gt;</code></pre>
+            <!-- Trigger -->
+            <button
+              class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+              data-clipboard-target="#css-link"
+            >
+              <span class="tooltiptext">Copy to clipboard</span>
+            </button>
+          </div>
+          <p class="p-medium">
+            Read more on <a href="https://github.com/boriskirov/mirotone" class="link link-primary">Github</a>
+          </p>
+        </section>
+        <section>
+          <h2 class="h2">How does it work</h2>
+          <p>Mirotone uses the BEM naming conventation. You define the type of CSS and add a modifier to it.</p>
+          <p>
+            Example:
+            <code>
+              <span><</span>button class="button button-primary"<span>></span>Primary button<span><<span>/</span></span
+              >button<span>></span>
+            </code>
+          </p>
+          <button class="button button-primary">Primary button</button>
+          <hr />
+        </section>
         <div>
           <div class="content">
             <section>
@@ -197,6 +216,7 @@
                 <li><a class="link link-text" href="#input-anchor">Input</a></li>
                 <li><a class="link link-text" href="#select-anchor">Select</a></li>
                 <li><a class="link link-text" href="#tabs-anchor">Tabs</a></li>
+                <li><a class="link link-text" href="#divider">Divider</a></li>
               </ul>
               <hr />
             </section>
@@ -234,8 +254,8 @@
               <!-- Paragraphs -->
               <h2 class="h2">Paragraphs</h2>
               <p class="p-large">
-                Use <code>.p-large</code>,<code>.p-medium</code> or <code>.p-small</code> to change an elements font size
-                and weight to match Miro paragraph styles.
+                Use <code>.p-large</code>,<code>.p-medium</code> or <code>.p-small</code> to change an elements font
+                size and weight to match Miro paragraph styles.
               </p>
               <hr />
               <p class="p-large">Paragraph large</p>
@@ -263,7 +283,7 @@
                 You can use the Miro icons by adding class <code>.icon</code> + <code>.icon-eye</code>, eye in this case
                 is the icon name. You can find all icons in the <code>dist/icons</code> folder.
               </p>
-              <div class="row" style="display: flex; flex-wrap: wrap;">
+              <div class="row" style="display: flex; flex-wrap: wrap">
                 <div class="icon icon-add-collumn-right"></div>
                 <div class="icon icon-add-row-bottom"></div>
                 <div class="icon icon-align-left"></div>
@@ -383,9 +403,11 @@
               <div class="row">
                 <!-- Primary button -->
                 <h3 class="h3">Primary button</h3>
-                <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
-                <p class="p-large">Use the <code>.button-primary</code> to add modificator for color. 
-                  When using a button element, always specify a <code>type=""</code></p>   
+                <p class="p-large">Use the <code>.button</code> class to trigger the default button.</p>
+                <p class="p-large">
+                  Use the <code>.button-primary</code> to add modificator for color. When using a button element, always
+                  specify a <code>type=""</code>
+                </p>
                 <button class="button button-primary" type="button">Primary button</button>
                 <button class="button button-primary button-small" type="button">Primary small</button>
                 <div class="code-wrapper">
@@ -406,9 +428,11 @@
                 <hr />
                 <!-- Secondary button -->
                 <h3 class="h3">Secondary button</h3>
-                <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
-                <p class="p-large">Use the <code>.button-secondary</code> to add modificator for color.
-                  When using a button element, always specify a <code>type=""</code></p>   
+                <p class="p-large">Use the <code>.button</code> class to trigger the default button.</p>
+                <p class="p-large">
+                  Use the <code>.button-secondary</code> to add modificator for color. When using a button element,
+                  always specify a <code>type=""</code>
+                </p>
                 <button class="button button-secondary" type="button">Secondary button</button>
                 <button class="button button-secondary button-small" type="button">Secondary small</button>
                 <div class="code-wrapper">
@@ -431,9 +455,11 @@
 
               <!-- Danger button -->
               <h3 class="h3">Danger button</h3>
-              <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
-              <p class="p-large">Use the <code>.button-danger</code> to add modificator for color.
-                When using a button element, always specify a <code>type=""</code></p>
+              <p class="p-large">Use the <code>.button</code> class to trigger the default button.</p>
+              <p class="p-large">
+                Use the <code>.button-danger</code> to add modificator for color. When using a button element, always
+                specify a <code>type=""</code>
+              </p>
               <button class="button button-danger" type="button">Danger button</button>
               <button class="button button-danger button-small" type="button">Danger small</button>
               <div class="code-wrapper">
@@ -455,9 +481,11 @@
 
               <!-- Secondary border button -->
               <h3 class="h3">Secondary border button</h3>
-              <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
-              <p class="p-large">Use the <code>.button-secondary-border</code> to add modificator for color.
-                When using a button element, always specify a <code>type=""</code></p>
+              <p class="p-large">Use the <code>.button</code> class to trigger the default button.</p>
+              <p class="p-large">
+                Use the <code>.button-secondary-border</code> to add modificator for color. When using a button element,
+                always specify a <code>type=""</code>
+              </p>
               <button class="button button-secondary-border" type="button">Secondary border button</button>
               <button class="button button-secondary-border button-small" type="button">Secondary border small</button>
               <div class="code-wrapper">
@@ -479,9 +507,11 @@
 
               <!-- Danger border button -->
               <h3 class="h3">Danger border button</h3>
-              <p class="p-large">Use the  <code>.button</code> class to trigger the default button.</p>
-              <p class="p-large">Use the <code>.button-danger-border</code> to add modificator for color.
-                When using a button element, always specify a <code>type=""</code></p>
+              <p class="p-large">Use the <code>.button</code> class to trigger the default button.</p>
+              <p class="p-large">
+                Use the <code>.button-danger-border</code> to add modificator for color. When using a button element,
+                always specify a <code>type=""</code>
+              </p>
               <button class="button button-danger-border" type="button">Danger border button</button>
               <button class="button button-danger-border button-small" type="button">Danger border small</button>
               <div class="code-wrapper">
@@ -503,8 +533,10 @@
 
               <!-- Disabled button -->
               <h3 class="h3">Disabled button</h3>
-              <p class="p-large">Use the <code>disabled=""</code> attribute for disabling buttons.
-                When using a button element, always specify a <code>type=""</code></p>
+              <p class="p-large">
+                Use the <code>disabled=""</code> attribute for disabling buttons. When using a button element, always
+                specify a <code>type=""</code>
+              </p>
               <button class="button button-primary" type="button" disabled>Disabled button</button>
               <button class="button button-primary button-small" type="button" disabled>Disabled small</button>
               <div class="code-wrapper">
@@ -550,7 +582,7 @@
             <!--Checkbox-->
             <section id="checkbox-anchor">
               <h2 class="h2">Checkbox</h2>
-              <p class="p-large">Use the  <code>.checkbox</code> class.</p>
+              <p class="p-large">Use the <code>.checkbox</code> class.</p>
               <hr />
               <label class="checkbox">
                 <input type="checkbox" checked="" />
@@ -579,7 +611,7 @@
             <!--Toggle-->
             <section id="toggle-anchor">
               <h2 class="h2">Toggle</h2>
-              <p class="p-large">Use the  <code>.toggle</code> class.</p>
+              <p class="p-large">Use the <code>.toggle</code> class.</p>
               <hr />
               <label class="toggle">
                 <input type="checkbox" checked="" />
@@ -611,7 +643,7 @@
             <!--Radio Button-->
             <section id="radiobutton-anchor">
               <h2 class="h2">Radio button</h2>
-              <p class="p-large">Use the  <code>.radiobutton</code> class.</p>
+              <p class="p-large">Use the <code>.radiobutton</code> class.</p>
               <hr />
               <label class="radiobutton">
                 <input type="radio" value="0" name="radio" checked="" />
@@ -644,7 +676,7 @@
             <section id="link-anchor">
               <h2 class="h2">Link</h2>
               <p class="p-large">
-                Use the  <code>.link</code> class to stlye the <code><span><</span>a<span>></span></code
+                Use the <code>.link</code> class to stlye the <code><span><</span>a<span>></span></code
                 >tag
               </p>
               <p class="p-large">Use the <code>.link-primary</code> to add modificator for color.</p>
@@ -654,7 +686,10 @@
               <a class="link link-text" href="">Text</a>
               <div class="code-wrapper">
                 <!-- Target -->
-                <pre id="link" class="textarea language-html"><code>&lt;a class="link link-primary" href=""&gt;Primary&lt;/a&gt;</code></pre>
+                <pre
+                  id="link"
+                  class="textarea language-html"
+                ><code>&lt;a class="link link-primary" href=""&gt;Primary&lt;/a&gt;</code></pre>
                 <!-- Trigger -->
                 <button
                   class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
@@ -667,7 +702,9 @@
             <!--Textarea-->
             <section id="textarea-anchor">
               <h2 class="h2">Textarea</h2>
-              <p class="p-large">Use a <code>.form-group</code>to group the textarea with label and status if needed.</p>
+              <p class="p-large">
+                Use a <code>.form-group</code>to group the textarea with label and status if needed.
+              </p>
               <hr />
               <div class="form-group">
                 <label>Label</label>
@@ -785,7 +822,8 @@
                 Use a <code>.tabs</code>class to style your wrapper. Use <code>.tab</code> to style each pill.
               </p>
               <p class="p-large">
-                You can add <code>data-badge</code> attribute if you want to present a numerical values inside each tab. You can use <code>tabindex="0"</code> for indicating that its element can be focused.
+                You can add <code>data-badge</code> attribute if you want to present a numerical values inside each tab.
+                You can use <code>tabindex="0"</code> for indicating that its element can be focused.
               </p>
               <hr />
               <div class="tabs">
@@ -825,8 +863,25 @@
                 </button>
               </div>
             </section>
+            <!--Divider-->
+            <section id="tabs-anchor">
+              <h2 class="h2">Divider</h2>
+              <p class="p-large">Use a <code>&lt;hr/&gt;</code> or class <code>.hr</code> to use a divider.</p>
+              <hr />
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre id="divider" class="textarea language-html"><code>&lt;hr/&gt;</code></pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#divider"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+            </section>
           </div>
-        </div> 
+        </div>
       </main>
     </div>
   </body>

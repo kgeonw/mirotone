@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,700&display=swap');
 
 :root {
-  /* COLORS */
+  /* Color variables */
   --blue100: rgba(244, 246, 255, 1);
   --blue200: rgba(240, 242, 255, 1);
   --blue300: rgba(232, 236, 255, 1);
@@ -50,20 +50,19 @@
   --whiteAlpha20: rgba(255, 255, 255, 0.2);
   --indigo50: rgba(245, 245, 247, 1);
 
-  /* TYPOGRAPHY */
-  /* Font family */
+  /* Font family variables */
   --header-font: 'Open Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
     Apple Color Emoji, Segoe UI Emoji;
   --body-font: 'Open Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji,
     Segoe UI Emoji;
 
-  /* Font weight */
+  /* Font weight variables */
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 600;
   --font-weight-black: 800;
 
-  /* Font sizes */
+  /* Font sizes variables */
   --font-size-small: 12px;
   --font-size-medium: 14px;
   --font-size-large: 16px;
@@ -71,13 +70,22 @@
   --font-size-xxlarge: 24px;
   --font-size-xxxlarge: 28px;
 
-  /*Border Radius*/
-  --border-radius-small: 2px;
+  /*Border radius variables*/
   --border-radius-medium: 4px;
   --border-radius-large: 8px;
   --border-radius-xlarge: 16px;
   --border-radius-xxlarge: 32px;
   --border-radius-circle: 125px;
+
+  /*Space variables*/
+  --space-xxsmall: 4px;
+  --space-xsmall: 8px;
+  --space-small: 16px;
+  --space-medium: 24px;
+  --space-large: 32px;
+  --space-xlarge: 40px;
+  --space-xxlarge: 48px;
+  --space-xxlarge: 64px;
 }
 
 html {

@@ -7,15 +7,14 @@
 .form-group label {
   display: block;
   font-size: var(--font-size-large);
-  margin-bottom: 10px;
+  margin-bottom: var(--space-xsmall);
   color: var(--indigo700);
 }
 
 .form-group-small label {
   display: block;
   font-size: var(--font-size-medium);
-  margin-bottom: 10px;
-  margin-bottom: 8px;
+  margin-bottom: var(--space-xsmall);
 }
 
 .input {
@@ -30,7 +29,7 @@
   border-color: var(--indigo400);
   outline: none;
   width: 100%;
-  padding: 13px 16px 13px;
+  padding: var(--space-xsmall) var(--space-small) var(--space-xsmall);
   font-size: var(--font-size-large);
   height: 48px;
 }
@@ -68,13 +67,6 @@
 }
 
 .input[disabled] {
-  display: inline-block;
-  vertical-align: top;
-  box-sizing: border-box;
-  border: 1px solid;
-  border-radius: var(--border-radius-medium);
-  padding: 11px 16px 13px;
-  font-size: var(--font-size-large);
   color: var(--indigo700);
   background-color: var(--indigo50);
   border-color: var(--indigo400);
@@ -85,7 +77,7 @@
 /* Size */
 
 .input-small {
-  padding: 9px 12px 9px;
+  padding: var(--space-xsmall) 12px var(--space-xsmall);
   font-size: var(--font-size-medium);
   height: 36px;
 }
@@ -93,7 +85,7 @@
 /* Status */
 
 .success div.status-text {
-  margin-top: 4px;
+  margin-top: var(--space-xxsmall);
   font-size: var(--font-size-small);
   color: var(--green700);
 }
@@ -103,7 +95,7 @@
 }
 
 .error div.status-text {
-  margin-top: 4px;
+  margin-top: var(--space-xxsmall);
   font-size: var(--font-size-small);
   color: var(--red700);
 }

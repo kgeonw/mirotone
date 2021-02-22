@@ -3,7 +3,7 @@
 .textarea {
   width: 100%;
   font-family: var(--body-font);
-  padding: 13px 16px 13px;
+  padding: 12px var(--space-small) 12px;
   resize: none;
   display: inline-block;
   vertical-align: top;
@@ -51,13 +51,6 @@
 }
 
 .textarea[disabled] {
-  display: inline-block;
-  vertical-align: top;
-  box-sizing: border-box;
-  border: 1px solid;
-  border-radius: var(--border-radius-medium);
-  padding: 11px 16px 13px;
-  font-size: var(--font-size-large);
   color: var(--indigo700);
   background-color: var(--indigo50);
   border-color: var(--indigo400);
