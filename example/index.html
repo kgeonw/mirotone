@@ -5,10 +5,8 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css" />
     <link rel="icon" href="mirotone.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="https://unpkg.com/mirotone/dist/styles.css" />
-    {#
-    <link rel="stylesheet" href="./dist/styles.css" />
-    #}
+
+    <link rel="stylesheet" href="../dist/styles.css" />
     <meta
       name="description"
       content="Mirotone is a small & lightweight skeleton UI Kit that tries to match Miro styles for building apps and plugins."
@@ -555,6 +553,32 @@
                 </button>
               </div>
               <hr />
+
+              <!-- Loading button -->
+              <h3 class="h3">Loading button</h3>
+              <p class="p-large">
+                Use the <code>button-loading</code> attribute for calling a loading button appereance. When using a
+                button element, always specify a <code>type=""</code>
+              </p>
+              <button class="button button-primary button-loading" type="button">Loading button</button>
+              <button class="button button-primary button-small button-loading" type="button">Loading small</button>
+              <div class="code-wrapper">
+                <!-- Target -->
+                <pre
+                  id="button-primary"
+                  class="textarea language-html"
+                ><code>&lt;button class="button button-primary button-loading" type="button" &gt;Primary button&lt;/button&gt;
+ &lt;button class="button button-primary button-small button-loading" type="button " &gt;Primary small&lt;/button&gt;</code></pre>
+                <!-- Trigger -->
+                <button
+                  class="btn button-icon button-icon-small icon-duplicate copy-button tooltip"
+                  data-clipboard-target="#button-primary-dis"
+                >
+                  <span class="tooltiptext">Copy to clipboard</span>
+                </button>
+              </div>
+              <hr />
+
               <!-- Icon button -->
               <h3 class="h3">Icon button</h3>
               <p class="p-large">
@@ -737,7 +761,11 @@
               <p class="p-large">Use a <code>.form-group</code>to group the input with label and status if needed.</p>
               <p class="p-large">You can find two sizes of inputs: <code>.input</code> and <code>.input-small</code></p>
               <p>For <code>.input-small</code> combine it with a <code>.form-group-small</code> as wrapping style.</p>
-              <p>Input is supporting <code>disabled=''</code> attribute.</p>
+              <p>
+                Input is supporting <code>disabled=''</code> attribute and also the following type attributes:<code
+                  >type="text"</code
+                ><code>type="password"</code><code>type="email"</code><code>type="tel"</code>
+              </p>
               <hr />
               <div class="form-group">
                 <label>Input</label>

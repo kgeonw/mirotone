@@ -185,3 +185,42 @@
   background-position-x: 6px;
   background-position-y: 6px;
 }
+
+/* Loading button */
+
+.button-loading {
+  color: transparent !important;
+}
+
+.button-loading:after {
+  -webkit-animation: spinning 0.5s infinite linear;
+  animation: spinning 0.5s infinite linear;
+  border: 2px solid var(--white);
+  border-radius: 9999px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: '';
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+  left: calc(50% - (1em / 2));
+  top: calc(-35% - (1em / 2));
+}
+
+@-webkit-keyframes spinning {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@keyframes spinning {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
